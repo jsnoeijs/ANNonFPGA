@@ -117,9 +117,10 @@ begin
 						end loop;
 						k_next <= to_unsigned(NBELMTS, k_next'length);
 						mult_next <= (others => ZERO);
-		when ST_OP   => 
-					    mult_next(k)<= mult_out(2*NBITS-1)&mult_out(NBITS-2 downto 0);
-	
+		when ST_OP   => k := to_integer(k_reg);
+						if k /= 0 then
+					   		mult_next(k-1)<= mult_out(2*NBITS-1)&mult_out(NBITS-2 downto 0);
+						end if;
 						k_next <= dec_out;
 		end case;
 			
