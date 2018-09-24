@@ -1,0 +1,152 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.math_real.all;
+
+entity elemwise_prod is
+	
+	generic (NBITS : natural := 8;
+			NBELMTS: natural := 8;
+			REG_DELAY: natural := 100;
+			INT_BITS: natural := 3); -- number of integer bits
+	port(
+		signal start, clk, rst: in std_logic;
+		signal a_in, b_in: in std_logic_vector(NBITS*NBELMTS-1 downto 0);
+		signal ready: out std_logic;
+		signal z_out: out std_logic_vector(NBITS*NBELMTS-1 downto 0));
+		
+	end entity elemwise_prod;
+	
+architecture fsmd of elemwise_prod is
+	
+	
+	constant ZERO : signed(NBITS-1 downto 0) := (others => '0');
+	constant IN_ZERO : signed(NBELMTS*NBITS-1 downto 0) := (others => '0');
+	constant CNT_ZERO : unsigned(integer(ceil(log2(real(NBELMTS)))) downto 0) := (others => '0');
+		
+	-- states & state register	
+	type state_type is (ST_IDLE, ST_ZERO, ST_LOAD, ST_OP);
+	signal state_reg, state_next : state_type;
+	
+	-- data registers
+	type input_type is array (0 to NBELMTS-1) of signed(NBITS-1 downto 0);
+	signal a_reg, a_next, b_reg, b_next : input_type; -- input registers
+	signal k_reg, k_next : unsigned(integer(ceil(log2(real(NBELMTS)))) downto 0) := (others => '0'); -- counting register (forced to use 4 bits for 8 elememts for complete addition)  
+    signal mult_reg, mult_next: input_type;
+	
+	--internal status signals
+	signal k_count0, a_in0, b_in0: std_logic;
+	
+	--functional unit outputs
+	signal mult_out : signed(2*NBITS-1 downto 0);
+	signal dec_out : unsigned(integer(ceil(log2(real(NBELMTS)))) downto 0); 
+	
+	
+begin
+	
+	--(CU) state register
+	
+	CU_REG: process(clk, rst)
+	begin
+		if rst ='1' then
+			state_reg <= ST_IDLE;
+		elsif rising_edge(clk) then
+			state_reg <= state_next after REG_DELAY*ps;
+		end if;
+	end process CU_REG;
+	
+	--(CU) next-state logic
+	CU_NSL: process (a_in0, b_in0, state_reg, start, k_count0)
+	begin
+		state_next <= state_reg;
+		case state_reg is
+		when ST_IDLE => if start ='1' then
+							if b_in0 ='1' or a_in0 ='1' then
+								state_next <= ST_ZERO;
+							else
+								state_next <= ST_LOAD;
+							end if;
+						end if;
+		when ST_ZERO => state_next <= ST_IDLE;
+		when ST_LOAD => state_next <= ST_OP;
+		when ST_OP => if k_count0 = '1' then
+						state_next <= ST_IDLE;	
+						end if;
+		
+		end case;
+	end process CU_NSL;
+			
+	--(CU) output logic
+	CU_OL: ready <= '1' when state_reg = ST_IDLE else '0';
+	
+	-- (DPU) data registers
+	DPU_REG: process (clk, rst)
+	begin 
+		if rst = '1' then
+			a_reg <= (others => ZERO);
+			b_reg <= (others => ZERO);
+			k_reg <= (others => '0');
+			mult_reg <= (others => ZERO);
+		elsif rising_edge(clk) then
+			a_reg <= a_next after REG_DELAY*ps;
+			b_reg <= b_next after REG_DELAY*ps;
+			k_reg <= k_next after REG_DELAY*ps;
+			mult_reg <= mult_next after REG_DELAY*ps;
+		end if;
+	end process DPU_REG;
+	
+	-- (DPU) status signals
+	a_in0 <= '1' when a_in = std_logic_vector(IN_ZERO) else '0';
+	b_in0 <= '1' when b_in = std_logic_vector(IN_ZERO) else '0';
+	k_count0 <= '1' when k_next = CNT_ZERO else '0';
+	
+	-- (DPU) routing mux
+	DPU_RMUX: process(state_reg, a_in, b_in, a_reg, b_reg, k_reg, mult_reg, mult_out, dec_out)
+		variable k : natural := 0;
+	begin
+		a_next <= a_reg;
+		b_next <= b_reg;
+		k_next <= k_reg;
+		mult_next <= mult_reg;
+		case state_reg is
+		when ST_IDLE => null;
+		when ST_ZERO => mult_next <= (others => ZERO);
+		when ST_LOAD => for i in 0 to NBELMTS-1 loop
+							a_next(i) <= signed(a_in(NBITS*(i+1)-1 downto (NBITS*i)));
+							b_next(i) <= signed(b_in(NBITS*(i+1)-1 downto (NBITS*i)));
+						end loop;
+						k_next <= to_unsigned(NBELMTS, k_next'length);
+						mult_next <= (others => ZERO);
+		when ST_OP   => 
+					    mult_next(k)<= mult_out(2*NBITS-1)&mult_out(NBITS-2 downto 0);
+	
+						k_next <= dec_out;
+		end case;
+			
+						
+	end process DPU_RMUX;
+
+	--(DPU) functional units
+	-- I chose to use a process here for the use of an integer variable instead of the register k_reg directly which was causing compilation errors in modelsim
+	DPU_FCT: process(a_reg, b_reg, k_reg)
+		variable k : natural := 0;
+		
+	begin
+	mult_out <= (others => '0');
+	k := to_integer(k_reg);
+							
+	dec_out <= k_reg - 1;
+	if k /= 0 then
+		mult_out <= shift_right(a_reg(k-1)*b_reg(k-1), NBITS-INT_BITS-1);
+	end if;
+	end process DPU_FCT;
+	
+	--(DPU) data output
+	OTP_LOGIC: process(mult_reg)
+	begin
+		for i in 0 to NBELMTS-1 loop
+			z_out((i+1)*NBITS-1 downto i*NBITS) <= std_logic_vector(mult_reg(i));
+		end loop;
+	end process OTP_LOGIC;
+	end architecture fsmd;
+	

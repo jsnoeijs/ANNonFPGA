@@ -1,0 +1,87 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.math_real.all;
+
+
+-- 1 output GRU unit --> Must specify GRU layer output size for recurrent terms matrix size.
+-- To be used in parallel with OUTPUT_SIZE-1 same GRU units. 
+-- Recurrence should be done by routing the output of this block to the S inputs of this block and all other parallel blocks
+entity fcgru is
+	generic(
+			NBITS       : natural := 8;
+			INPUT_SIZE  : natural := 4;
+			OUTPUT_SIZE : natural := 16;
+			INT_BITS    : natural := 3; --integer bits + sign bit
+			NB_SAMPLES  : natural := 10
+ 
+	);
+	port(
+		 clk, rst  : in std_logic;
+		 start     : in std_logic;
+		 ready     : out std_logic;
+		 xn        : in std_logic_vector(NBITS*INPUT_SIZE-1 downto 0); -- receives only 1 sample at a time
+		 sn_1      : in std_logic_vector(NBITS*OUTPUT_SIZE-1 downto 0); -- sends only 1 sample at a time
+		-- rn        : in std_logic_vector(NBITS*OUTPUT_SIZE-1 downto 0);
+		 uz        : in std_logic_vector(NBITS*INPUT_SIZE*OUTPUT_SIZE-1 downto 0);
+		 ur        : in std_logic_vector(NBITS*INPUT_SIZE*OUTPUT_SIZE-1 downto 0);
+		 uh        : in std_logic_vector(NBITS*INPUT_SIZE*OUTPUT_SIZE-1 downto 0);
+		 wz        : in std_logic_vector(NBITS*OUTPUT_SIZE*OUTPUT_SIZE-1 downto 0);
+		 wr        : in std_logic_vector(NBITS*OUTPUT_SIZE*OUTPUT_SIZE-1 downto 0);
+		 wh        : in std_logic_vector(NBITS*OUTPUT_SIZE*OUTPUT_sIZE-1 downto 0);
+		 bz        : in std_logic_vector(NBITS*OUTPUT_SIZE-1 downto 0);
+		 br        : in std_logic_vector(NBITS*OUTPUT_SIZE-1 downto 0);
+		 bh        : in std_logic_vector(NBITS*OUTPUT_SIZE-1 downto 0);
+		-- snj       : out std_logic_vector(NBITS-1 downto 0);
+		-- rnj       : out std_logic_vector(NBITS-1 downto 0)
+	);
+	end entity fcgru;
+
+architecture fsmd of fcgru is
+	type output is array (0 to OUTPUT_SIZE -1) of std_logic_vector(NBITS-1 downto 0);
+	--type dir_vector is array (0 to INPUT_SIZE -1) of std_logic_vector(NBITS-1 downto 0);
+	type biases is array (0 to OUTPUT_SIZE-1) of std_logic_vector(NBITS-1 downto 0);
+	type rec_weights is array (0 to OUTPUT_SIZE-1) of std_logic_vector(OUTPUT_SIZE*NBITS-1 downto 0);
+	type dir_weights is array (0 to OUPUT_SIZE-1) of std_logic_vector(INPUT_SIZE*NBITS-1 downto 0;
+	type state_type is (IDLE, LOAD, CALC);
+	subtype counter_type is  unsigned(integer(ceil(log2(real(NB_SAMPLES)))) downto 0);
+
+	signal state_reg, state_next : state_type;
+	signal wr_tab, wz_tab, wh_tab : rec_weights;
+	signal ur_tab, uz_tab, uh_tab : dir_weights;
+	signal br_tab, bz_tab, bh_tab : biases;
+	signal sample_cnt_reg, sample_cnt_next : counter_type;
+begin
+	REG: process(clk, rst)
+		begin
+			if rst = '1' then
+				state_reg <= IDLE;
+				sample_cnt_reg <= SAMPLE_CNT_ZERO;
+				--x_reg <= X_ZERO;
+				--w_reg <= W_ZERO;
+				--b_reg <= B_ZERO;
+			elsif rising_edge(clk) then
+				state_reg <= state_next;
+				sample_cnt_reg <= sample_cnt_next;
+				--x_reg <= x_next;
+				--w_reg <= w_next;
+				--b_reg <= b_next;
+			end if;
+		end process REG;
+	
+	 
+	
+		NSL: process(state_reg, start, sample_cnt_is_zero)
+		begin
+			state_next <= state_reg;
+			case state_reg is
+			when IDLE => if start = '1' then
+							state_next <= LOAD;
+						 end if;
+			when LOAD => state_next <= CALC;
+			when CALC => if sample_cnt_is_zero = '1' then
+							state_next <= IDLE;
+						 end if;
+			end case;
+	end process;
+end architecture fsmd;

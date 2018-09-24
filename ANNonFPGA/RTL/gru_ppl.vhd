@@ -1,0 +1,11 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.math_real.all;
+
+entity gru is
+	end entity gru;
+	
+architecture ppl of gru is
+begin
+	end architecture ppl;
