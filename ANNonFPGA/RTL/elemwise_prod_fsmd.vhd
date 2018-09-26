@@ -25,14 +25,14 @@ architecture fsmd of elemwise_prod is
 	constant CNT_ZERO : unsigned(integer(ceil(log2(real(NBELMTS)))) downto 0) := (others => '0');
 		
 	-- states & state register	
-	type state_type is (ST_IDLE, ST_ZERO, ST_LOAD, ST_OP);
+	type state_type is (ST_IDLE, ST_LOAD, ST_OP);
 	signal state_reg, state_next : state_type;
 	
 	-- data registers
 	type input_type is array (0 to NBELMTS-1) of signed(NBITS-1 downto 0);
 	signal a_reg, a_next, b_reg, b_next : input_type; -- input registers
 	signal k_reg, k_next : unsigned(integer(ceil(log2(real(NBELMTS)))) downto 0) := (others => '0'); -- counting register (forced to use 4 bits for 8 elememts for complete addition)  
-    signal mult_reg, mult_next: input_type;
+    	signal mult_reg, mult_next: input_type;
 	
 	--internal status signals
 	signal k_count0, a_in0, b_in0: std_logic;
@@ -61,13 +61,8 @@ begin
 		state_next <= state_reg;
 		case state_reg is
 		when ST_IDLE => if start ='1' then
-							if b_in0 ='1' or a_in0 ='1' then
-								state_next <= ST_ZERO;
-							else
-								state_next <= ST_LOAD;
-							end if;
+						state_next <= ST_LOAD;
 						end if;
-		when ST_ZERO => state_next <= ST_IDLE;
 		when ST_LOAD => state_next <= ST_OP;
 		when ST_OP => if k_count0 = '1' then
 						state_next <= ST_IDLE;	
@@ -110,7 +105,6 @@ begin
 		mult_next <= mult_reg;
 		case state_reg is
 		when ST_IDLE => null;
-		when ST_ZERO => mult_next <= (others => ZERO);
 		when ST_LOAD => for i in 0 to NBELMTS-1 loop
 							a_next(i) <= signed(a_in(NBITS*(i+1)-1 downto (NBITS*i)));
 							b_next(i) <= signed(b_in(NBITS*(i+1)-1 downto (NBITS*i)));

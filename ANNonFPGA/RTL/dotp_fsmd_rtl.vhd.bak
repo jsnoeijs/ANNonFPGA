@@ -103,6 +103,7 @@ begin
 		acc_next <= acc_reg;
 		case state_reg is
 		when ST_IDLE => null;
+		when ST_ZERO => acc_next <= (others => '0');
 		when ST_LOAD => for i in 0 to NBELMTS-1 loop
 							a_next(i) <= signed(a_in(NBITS*(i+1)-1 downto (NBITS*i)));
 							b_next(i) <= signed(b_in(NBITS*(i+1)-1 downto (NBITS*i)));

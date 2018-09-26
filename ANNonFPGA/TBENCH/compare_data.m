@@ -1,7 +1,7 @@
 
-OUTPUTS = 16;
-NBSAMPLES = 20;
-INPUTS =8;
+OUTPUTS = 4;
+NBSAMPLES = 50;
+INPUTS =2;
 NBITS=32;
 NB_FRAC = 28;
 fileDATA = fopen('data_in.txt', 'r');
@@ -27,6 +27,7 @@ hw_sn = textscan(fileDATA, '%s');
 j=0;
 sn_hw = zeros(NBSAMPLES*OUTPUTS, 1);
 for i=1:(NBSAMPLES*OUTPUTS+1+NBSAMPLES*2)
+    i;
     if strlength(hw_sn{1}{i})==6
         if hw_sn{1}{i} == 'sample'
             if hw_sn{1}{i+1} == num2str(j)

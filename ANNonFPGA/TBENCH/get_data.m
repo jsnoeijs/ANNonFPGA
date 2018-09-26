@@ -1,8 +1,8 @@
 mu = 0;
 sigma = 1;
-INPUTS = 8;
-OUTPUTS = 16;
-NB_SAMPLES = 20;
+INPUTS = 2;
+OUTPUTS = 4;
+NB_SAMPLES = 50;
 NBITS=32;
 NB_FRAC = 28;
 NB_INT=3;

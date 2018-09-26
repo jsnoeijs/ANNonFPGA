@@ -14,9 +14,9 @@ architecture bench of fcgru_fsmd_tb is
 	file file_OUTPUTS: text;
 	constant INT_BITS : natural := 3;
 	constant NBITS : natural := 32;
-	constant OUTPUT_SIZE: natural := 16;
-	constant INPUT_SIZE: natural := 8;
-	constant NB_SAMPLES: natural := 20;
+	constant OUTPUT_SIZE: natural := 4;
+	constant INPUT_SIZE: natural := 2;
+	constant NB_SAMPLES: natural := 50;
 	constant CLK_PER: time := 10*ns;
 	constant OUT_UNDEF : std_logic_vector(NBITS*OUTPUT_SIZE-1 downto 0) := std_logic_vector(to_unsigned(7777777, NBITS*OUTPUT_SIZE));
 	signal clk_tb : std_logic := '0';
@@ -83,7 +83,7 @@ begin
 		
 		
 		--file_open(file_INPUTS, "/home/edabd54/HSM/vhdl_asic/HDL/ANNonFPGA/TBENCH/data_in.txt", read_mode);
-		file_open(file_INPUTS, "C:\\Users\\jan_snoeijs\\home\\EPFL\\Master_3\\SEMESTER_PROJECT_FILES\\ANNonFPGA\\TBENCH\\data_in.txt", read_mode);
+		file_open(file_INPUTS, "C:\\Users\\jan_snoeijs\\home\\EPFL\\Master_3\\SEMESTER_PROJECT_FILES\\ANNonFPGA\\ANNonFPGA\\TBENCH\\data_in.txt", read_mode);
 		
 		while not endfile(file_INPUTS) loop
 		
@@ -272,14 +272,15 @@ begin
 		if INPUT_SIZE > OUTPUT_SIZE then
 			max := INPUT_SIZE+2*OUTPUT_SIZE+11;
 		else
-			max := OUTPUT_SIZE*3+3;
+			max := OUTPUT_SIZE*3+11;  -- wait for 1 FULL GRU cycle
 		end if;
 		
-		file_open(file_OUTPUTS, "C:\\Users\\jan_snoeijs\\home\\EPFL\\Master_3\\SEMESTER_PROJECT_FILES\\ANNonFPGA\\TBENCH\\data_out.txt", write_mode);
+		file_open(file_OUTPUTS, "C:\\Users\\jan_snoeijs\\home\\EPFL\\Master_3\\SEMESTER_PROJECT_FILES\\ANNonFPGA\\ANNonFPGA\\TBENCH\\data_out.txt", write_mode);
 		--wait for 3*CLK_PER;
 		V_STRING := "hardware outputs";
 		write(v_OLINE, V_STRING, left, 16);
-		writeline(file_OUTPUTS, v_OLINE);
+		writeline(file_OUTPUTS, v_OLINE);  
+		wait for 4*CLK_PER; -- wait for start
 		for j in 0 to NB_SAMPLES-1 loop
 			wait for max*CLK_PER;
 			v_sn := sn_duv;
