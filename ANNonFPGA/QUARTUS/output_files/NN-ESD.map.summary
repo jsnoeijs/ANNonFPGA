@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Sun Oct 14 19:09:28 2018
+Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+Revision Name : NN-ESD
+Top-level Entity Name : DE10_Standard
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 783
+Total pins : 153
+Total virtual pins : 0
+Total block memory bits : 1,024
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 1
+Total DLLs : 1

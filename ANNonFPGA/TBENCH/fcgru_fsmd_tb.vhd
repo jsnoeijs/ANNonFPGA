@@ -7,15 +7,15 @@ use ieee.std_logic_textio.all;
 
 entity fcgru_fsmd_tb is
 	end entity fcgru_fsmd_tb;
-	
+
 architecture bench of fcgru_fsmd_tb is
-	
+
 	file file_INPUTS: text;
 	file file_OUTPUTS: text;
-	constant INT_BITS : natural := 3;
-	constant NBITS : natural := 32;
-	constant OUTPUT_SIZE: natural := 4;
-	constant INPUT_SIZE: natural := 2;
+	constant INT_BITS : natural := 4;
+	constant NBITS : natural := 30;
+	constant OUTPUT_SIZE: natural := 50;
+	constant INPUT_SIZE: natural := 23;
 	constant NB_SAMPLES: natural := 50;
 	constant CLK_PER: time := 10*ns;
 	constant OUT_UNDEF : std_logic_vector(NBITS*OUTPUT_SIZE-1 downto 0) := std_logic_vector(to_unsigned(7777777, NBITS*OUTPUT_SIZE));
@@ -35,7 +35,7 @@ architecture bench of fcgru_fsmd_tb is
 	signal bz_tb        : std_logic_vector(OUTPUT_SIZE*NBITS-1 downto 0);
 	signal br_tb        : std_logic_vector(OUTPUT_SIZE*NBITS-1 downto 0);
 	signal bh_tb        : std_logic_vector(OUTPUT_SIZE*NBITS-1 downto 0);
-	
+
 	signal test         : std_logic_vector(NBITS-1 downto 0);
 	signal stop 		: boolean := false;
 	signal timeout      : boolean := false;
@@ -55,17 +55,28 @@ architecture bench of fcgru_fsmd_tb is
 	signal br_duv        : std_logic_vector(OUTPUT_SIZE*NBITS-1 downto 0);
 	signal bh_duv        : std_logic_vector(OUTPUT_SIZE*NBITS-1 downto 0);
 	signal finished_sample_duv: std_logic;
-	
+
+-- DEBUG
+	signal DEBUG_rn		: std_logic_vector(NBITS*OUTPUT_SIZE-1 downto 0);
+	signal DEBUG_hn 	: std_logic_vector(NBITS*OUTPUT_SIZE-1 downto 0);
+	signal DEBUG_zn 	: std_logic_vector(NBITS*OUTPUT_SIZE-1 downto 0);
+	signal DEBUG_rdir : std_logic_vector((NBITS+integer(ceil(log2(real(INPUT_SIZE)))))*OUTPUT_SIZE-1 downto 0);
+	signal DEBUG_hdir : std_logic_vector((NBITS+integer(ceil(log2(real(INPUT_SIZE)))))*OUTPUT_SIZE-1 downto 0);
+	signal DEBUG_zdir : std_logic_vector((NBITS+integer(ceil(log2(real(INPUT_SIZE)))))*OUTPUT_SIZE-1 downto 0);
+	signal DEBUG_rrec : std_logic_vector((NBITS+integer(ceil(log2(real(OUTPUT_SIZE)))))*OUTPUT_SIZE-1 downto 0);
+	signal DEBUG_hrec : std_logic_vector((NBITS+integer(ceil(log2(real(OUTPUT_SIZE)))))*OUTPUT_SIZE-1 downto 0);
+	signal DEBUG_zrec : std_logic_vector((NBITS+integer(ceil(log2(real(OUTPUT_SIZE)))))*OUTPUT_SIZE-1 downto 0);
+
 	-- for text file
 
 	--signal snj_duv       : std_logic_vector(NBITS-1 downto 0);
 	--signal rnj_duv       : std_logic_vector(NBITS-1 downto 0);
-begin 
+begin
 	process
 		variable v_ILINE: line;
 		variable v_SPACE: character;
 		variable v_IN_TYPE: string(1 to 7);
-	
+
 		variable v_xn_tb        : std_logic_vector(NB_SAMPLES*NBITS*INPUT_SIZE-1 downto 0);
 		--variable v_sn_1_tb      : std_logic_vector(NB_SAMPLES*NBITS*OUTPUT_SIZE-1 downto 0);
 		--variable v_rn_tb        : std_logic_vector(NB_SAMPLES*NBITS*OUTPUT_SIZE-1 downto 0);
@@ -80,16 +91,16 @@ begin
 		variable v_bh_tb        : std_logic_vector(OUTPUT_SIZE*NBITS-1 downto 0);
 		variable v_test           : std_logic_vector(NBITS-1 downto 0);
 	begin
-		
-		
+
+
 		--file_open(file_INPUTS, "/home/edabd54/HSM/vhdl_asic/HDL/ANNonFPGA/TBENCH/data_in.txt", read_mode);
 		file_open(file_INPUTS, "C:\\Users\\jan_snoeijs\\home\\EPFL\\Master_3\\SEMESTER_PROJECT_FILES\\ANNonFPGA\\ANNonFPGA\\TBENCH\\data_in.txt", read_mode);
-		
+
 		while not endfile(file_INPUTS) loop
-		
+
 		readline(file_INPUTS, v_ILINE);
 	    read(v_ILINE, v_IN_TYPE);
-	    
+
 			case v_IN_TYPE is
 			when "inputs " => for j in 0 to NB_SAMPLES-1 loop
 								report "passed in inputs j = " & integer'image(j);
@@ -152,7 +163,7 @@ begin
 									read(v_ILINE, v_bz_tb(NBITS*(i+1)-1 downto NBITS*i));
 									read(v_ILINE, v_SPACE);
 								end loop;
-							
+
 			when "br     " => readline(file_INPUTS, v_ILINE);
 								for i in 0 to OUTPUT_SIZE-1 loop
 									read(v_ILINE, v_br_tb(NBITS*(i+1)-1 downto NBITS*i));
@@ -163,22 +174,22 @@ begin
 									read(v_ILINE, v_bh_tb(NBITS*(i+1)-1 downto NBITS*i));
 									read(v_ILINE, v_SPACE);
 								end loop;
-		
+
 		when "*      " => exit;
  		when others    => readline(file_INPUTS, v_ILINE);
-							  read(v_ILINE, v_IN_TYPE);	
-							  report "passed in ""other""";			 	
+							  read(v_ILINE, v_IN_TYPE);
+							  report "passed in ""other""";
 				end case;
-			
+
 			--if v_IN_TYPE = "inputs " then
 			--	write(v_OLINE,  string'("hello from testbench"));
 			--	writeline(file_OUTPUTS, v_OLINE);
-			
+
 		end loop;
-		
+
 		file_close(file_INPUTS);
-	
-		
+
+
 		xn_tb <= v_xn_tb;
 		--sn_1_tb <= v_sn_1_tb;
 		uz_tb <= v_uz_tb;
@@ -193,7 +204,7 @@ begin
 		test <= v_test;
 		wait;
 	end process;
-		 
+
 		clk_tb <= not clk_tb after CLK_PER/2 when not stop;
 		rst_tb <= '0', '1' after CLK_PER*1/4, '0' after CLK_PER*3/4;
 		uz_duv <= uz_tb;
@@ -205,7 +216,7 @@ begin
 		br_duv <= br_tb;
 		bz_duv <= bz_tb;
 		bh_duv <= bh_tb;
-		
+
 		DUV: entity work.fcgru
 			generic map(
 				NBITS => NBITS,
@@ -230,7 +241,18 @@ begin
 				bz => bz_duv,
 				br => br_duv,
 				bh => bh_duv,
-				finished_sample => finished_sample_duv
+				finished_sample => finished_sample_duv,
+
+				-- DEBUG
+				DEBUG_rn => DEBUG_rn,
+				DEBUG_rdir => DEBUG_rdir,
+				DEBUG_rrec => DEBUG_rrec,
+				DEBUG_zn => DEBUG_zn,
+				DEBUG_zdir => DEBUG_zdir,
+				DEBUG_zrec => DEBUG_zrec,
+				DEBUG_hn => DEBUG_hn,
+				DEBUG_hdir => DEBUG_hdir,
+				DEBUG_hrec => DEBUG_hrec
 			);
 		process
 		begin
@@ -253,20 +275,29 @@ begin
 				i := i+1;
 			end if;
 			samples_done <= false;
-			if i = NB_SAMPLES then
+			if i = NB_SAMPLES-1 then
 				samples_done <= true;
 			end if;
 		end process;
-		
+
 		stop <= true when samples_done or timeout else false;
-		
+
 		-- write outputs back in .txt file.
 		process
-			
+
 		variable v_OLINE: line;
 		variable V_STRING: string(1 to 16);
 		variable V_SHSTRING: string (1 to 7);
 		variable v_sn: std_logic_vector(NBITS*OUTPUT_SIZE-1 downto 0);
+		variable v_DEBUG_rn: std_logic_vector(NBITS*OUTPUT_SIZE-1 downto 0);
+		variable v_DEBUG_hn: std_logic_vector(NBITS*OUTPUT_SIZE-1 downto 0);
+		variable v_DEBUG_zn: std_logic_vector(NBITS*OUTPUT_SIZE-1 downto 0);
+		variable v_DEBUG_rdir: std_logic_vector((NBITS+integer(ceil(log2(real(INPUT_SIZE)))))*OUTPUT_SIZE-1 downto 0);
+		variable v_DEBUG_zdir: std_logic_vector((NBITS+integer(ceil(log2(real(INPUT_SIZE)))))*OUTPUT_SIZE-1 downto 0);
+		variable v_DEBUG_hdir: std_logic_vector((NBITS+integer(ceil(log2(real(INPUT_SIZE)))))*OUTPUT_SIZE-1 downto 0);
+		variable v_DEBUG_rrec: std_logic_vector((NBITS+integer(ceil(log2(real(OUTPUT_SIZE)))))*OUTPUT_SIZE-1 downto 0);
+		variable v_DEBUG_zrec: std_logic_vector((NBITS+integer(ceil(log2(real(OUTPUT_SIZE)))))*OUTPUT_SIZE-1 downto 0);
+		variable v_DEBUG_hrec: std_logic_vector((NBITS+integer(ceil(log2(real(OUTPUT_SIZE)))))*OUTPUT_SIZE-1 downto 0);
 		variable max : integer;
 	begin
 		if INPUT_SIZE > OUTPUT_SIZE then
@@ -274,29 +305,60 @@ begin
 		else
 			max := OUTPUT_SIZE*3+11;  -- wait for 1 FULL GRU cycle
 		end if;
-		
+
 		file_open(file_OUTPUTS, "C:\\Users\\jan_snoeijs\\home\\EPFL\\Master_3\\SEMESTER_PROJECT_FILES\\ANNonFPGA\\ANNonFPGA\\TBENCH\\data_out.txt", write_mode);
 		--wait for 3*CLK_PER;
 		V_STRING := "hardware outputs";
 		write(v_OLINE, V_STRING, left, 16);
-		writeline(file_OUTPUTS, v_OLINE);  
+		writeline(file_OUTPUTS, v_OLINE);
 		wait for 4*CLK_PER; -- wait for start
 		for j in 0 to NB_SAMPLES-1 loop
 			wait for max*CLK_PER;
 			v_sn := sn_duv;
-			V_SHSTRING := "sample ";	
+			v_DEBUG_rn := DEBUG_rn;
+			v_DEBUG_hn := DEBUG_hn;
+			v_DEBUG_zn := DEBUG_zn;
+			v_DEBUG_rdir := DEBUG_rdir;
+			v_DEBUG_hdir := DEBUG_hdir;
+			v_DEBUG_zdir := DEBUG_zdir;
+			v_DEBUG_rrec := DEBUG_rrec;
+			v_DEBUG_hrec := DEBUG_hrec;
+			v_DEBUG_zrec := DEBUG_zrec;
+			V_SHSTRING := "sample ";
 			write(v_OLINE, V_SHSTRING, left, 7);
 			write(v_OLINE, j);
 			writeline(file_OUTPUTS, v_OLINE);
 			for i in 0 to OUTPUT_SIZE-1 loop
 				write(v_OLINE, v_sn(NBITS*(i+1)-1 downto NBITS*i));
 				writeline(file_OUTPUTS, v_OLINE);
+				-- debug
+				write(v_OLINE, v_DEBUG_rdir(NBITS*(i+1)-1 downto NBITS*i));
+				writeline(file_OUTPUTS, v_OLINE);
+				write(v_OLINE, v_DEBUG_rrec(NBITS*(i+1)-1 downto NBITS*i));
+				writeline(file_OUTPUTS, v_OLINE);
+				write(v_OLINE, v_DEBUG_rn(NBITS*(i+1)-1 downto NBITS*i));
+				writeline(file_OUTPUTS, v_OLINE);
+
+				write(v_OLINE, v_DEBUG_zdir(NBITS*(i+1)-1 downto NBITS*i));
+				writeline(file_OUTPUTS, v_OLINE);
+				write(v_OLINE, v_DEBUG_zrec(NBITS*(i+1)-1 downto NBITS*i));
+				writeline(file_OUTPUTS, v_OLINE);
+				write(v_OLINE, v_DEBUG_zn(NBITS*(i+1)-1 downto NBITS*i));
+				writeline(file_OUTPUTS, v_OLINE);
+
+				write(v_OLINE, v_DEBUG_hdir(NBITS*(i+1)-1 downto NBITS*i));
+				writeline(file_OUTPUTS, v_OLINE);
+				write(v_OLINE, v_DEBUG_hrec(NBITS*(i+1)-1 downto NBITS*i));
+				writeline(file_OUTPUTS, v_OLINE);
+				write(v_OLINE, v_DEBUG_hn(NBITS*(i+1)-1 downto NBITS*i));
+				writeline(file_OUTPUTS, v_OLINE);
+
 			end loop;
-			
+
 		end loop;
 
 		file_close(file_OUTPUTS);
 		wait;
 		end process;
-			
+
 end architecture bench;

@@ -1,21 +1,6 @@
-mu = 0;
-sigma = 1;
-INPUTS = 2;
-OUTPUTS = 4;
-NB_SAMPLES = 50;
-NBITS=32;
-NB_FRAC = 28;
-NB_INT=3;
-ur = normrnd(mu, sigma, INPUTS, OUTPUTS);
-uz = normrnd(mu, sigma, INPUTS, OUTPUTS);
-uh = normrnd(mu, sigma, INPUTS, OUTPUTS);
-wr = normrnd(mu, sigma, OUTPUTS, OUTPUTS);
-wz = normrnd(mu, sigma, OUTPUTS, OUTPUTS);
-wh = normrnd(mu, sigma, OUTPUTS, OUTPUTS);
-br = normrnd(mu, sigma, 1, OUTPUTS);
-bz = normrnd(mu, sigma, 1, OUTPUTS);
-bh = normrnd(mu, sigma, 1, OUTPUTS);
-x = rand(NB_SAMPLES, INPUTS);
+NBITS=30;
+
+NB_FRAC = 25;
 s = zeros(NB_SAMPLES+1, OUTPUTS);
 r = zeros(NB_SAMPLES, OUTPUTS);
 z = zeros(NB_SAMPLES, OUTPUTS);
