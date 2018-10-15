@@ -399,7 +399,7 @@
  * L4 Watchdog
  */
 #define CONFIG_HW_WATCHDOG
-#define CONFIG_HW_WATCHDOG_TIMEOUT_MS	(4000)
+#define CONFIG_HW_WATCHDOG_TIMEOUT_MS	(2000)
 #define CONFIG_DESIGNWARE_WATCHDOG
 #define CONFIG_DW_WDT_BASE		SOCFPGA_L4WD0_ADDRESS
 /* Clocks source frequency to watchdog timer */
@@ -692,9 +692,7 @@
  * Boot from NAND
  */
 #ifndef CONFIG_PRELOADER_BOOT_FROM_NAND
-/* 13.1 doesn't generate this variable */
-/* #error "CONFIG_PRELOADER_BOOT_FROM_NAND must be defined" */
-#define CONFIG_PRELOADER_BOOT_FROM_NAND (0)
+#error "CONFIG_PRELOADER_BOOT_FROM_NAND must be defined"
 #endif
 #if (CONFIG_PRELOADER_BOOT_FROM_NAND == 1)
 /* Support for drivers/mmc/libmmc.o in SPL binary */

@@ -212,8 +212,8 @@ tools: $(CONFIG)
 src: $(UNTAR_SRC)
 
 $(UNTAR_SRC): $(TGZ)
-	@$(RM) $(PRELOADER_SRC_DIR)
-	$(untar_recipe)
+	#@$(RM) $(PRELOADER_SRC_DIR)
+	#$(untar_recipe)
 	@$(CHMOD) -R 755 $(PRELOADER_SRC_DIR)
 	$(stamp)
 
