@@ -1,19 +1,10 @@
-C:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/TBENCH/fcgru_fsmd_tb.vhd {0 {vcom -work work -2002 -explicit -source C:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/TBENCH/fcgru_fsmd_tb.vhd
+{{C:/Users/Jan Snoeijs/Desktop/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/fcgru_fsmd.vhd}} {0 {vcom -work work -2008 -explicit {C:/Users/Jan Snoeijs/Desktop/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/fcgru_fsmd.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-Start time: 13:56:02 on Sep 23,2018
-vcom -reportprogress 300 -work work -2002 -explicit -source C:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/TBENCH/fcgru_fsmd_tb.vhd 
+Start time: 13:50:55 on Sep 23,2018
+vcom -reportprogress 300 -work work -2008 -explicit C:/Users/Jan Snoeijs/Desktop/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/fcgru_fsmd.vhd 
 ** Error (suppressible): (vcom-19) Failed to access library './fcgru_fsmd' at "./fcgru_fsmd".
 No such file or directory. (errno = ENOENT)
-End time: 13:56:02 on Sep 23,2018, Elapsed time: 0:00:00
-Errors: 1, Warnings: 0
-
-} {} {}} C:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/gru_fsmd.vhd {0 {vcom -work work -2002 -explicit C:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/gru_fsmd.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-Start time: 13:56:02 on Sep 23,2018
-vcom -reportprogress 300 -work work -2002 -explicit C:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/gru_fsmd.vhd 
-** Error (suppressible): (vcom-19) Failed to access library './fcgru_fsmd' at "./fcgru_fsmd".
-No such file or directory. (errno = ENOENT)
-End time: 13:56:02 on Sep 23,2018, Elapsed time: 0:00:00
+End time: 13:50:55 on Sep 23,2018, Elapsed time: 0:00:00
 Errors: 1, Warnings: 0
 
 } {} {}} {{C:/Users/Jan Snoeijs/Desktop/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/elemwise_prod_fsmd.vhd}} {0 {vcom -work work -2008 -explicit {C:/Users/Jan Snoeijs/Desktop/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/elemwise_prod_fsmd.vhd}
@@ -25,28 +16,19 @@ No such file or directory. (errno = ENOENT)
 End time: 13:50:55 on Sep 23,2018, Elapsed time: 0:00:00
 Errors: 1, Warnings: 0
 
-} {} {}} {{C:/Users/Jan Snoeijs/Desktop/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/fcgru_fsmd.vhd}} {0 {vcom -work work -2008 -explicit {C:/Users/Jan Snoeijs/Desktop/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/fcgru_fsmd.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-Start time: 13:50:55 on Sep 23,2018
-vcom -reportprogress 300 -work work -2008 -explicit C:/Users/Jan Snoeijs/Desktop/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/fcgru_fsmd.vhd 
-** Error (suppressible): (vcom-19) Failed to access library './fcgru_fsmd' at "./fcgru_fsmd".
-No such file or directory. (errno = ENOENT)
-End time: 13:50:55 on Sep 23,2018, Elapsed time: 0:00:00
-Errors: 1, Warnings: 0
-
-} {} {}} C:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/fcgru_fsmd.vhd {0 {vcom -work work -2002 -explicit C:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/fcgru_fsmd.vhd
+} {} {}} C:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/gru_fsmd.vhd {0 {vcom -work work -2002 -explicit C:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/gru_fsmd.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 Start time: 13:56:02 on Sep 23,2018
-vcom -reportprogress 300 -work work -2002 -explicit C:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/fcgru_fsmd.vhd 
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/gru_fsmd.vhd 
 ** Error (suppressible): (vcom-19) Failed to access library './fcgru_fsmd' at "./fcgru_fsmd".
 No such file or directory. (errno = ENOENT)
 End time: 13:56:02 on Sep 23,2018, Elapsed time: 0:00:00
 Errors: 1, Warnings: 0
 
-} {} {}} C:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/elemwise_prod_fsmd.vhd {0 {vcom -work work -2002 -explicit C:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/elemwise_prod_fsmd.vhd
+} {} {}} C:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/TBENCH/fcgru_fsmd_tb.vhd {0 {vcom -work work -2002 -explicit -source C:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/TBENCH/fcgru_fsmd_tb.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 Start time: 13:56:02 on Sep 23,2018
-vcom -reportprogress 300 -work work -2002 -explicit C:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/elemwise_prod_fsmd.vhd 
+vcom -reportprogress 300 -work work -2002 -explicit -source C:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/TBENCH/fcgru_fsmd_tb.vhd 
 ** Error (suppressible): (vcom-19) Failed to access library './fcgru_fsmd' at "./fcgru_fsmd".
 No such file or directory. (errno = ENOENT)
 End time: 13:56:02 on Sep 23,2018, Elapsed time: 0:00:00
@@ -61,6 +43,24 @@ No such file or directory. (errno = ENOENT)
 End time: 13:50:55 on Sep 23,2018, Elapsed time: 0:00:00
 Errors: 1, Warnings: 0
 
+} {} {}} C:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/elemwise_prod_fsmd.vhd {0 {vcom -work work -2002 -explicit C:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/elemwise_prod_fsmd.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+Start time: 13:56:02 on Sep 23,2018
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/elemwise_prod_fsmd.vhd 
+** Error (suppressible): (vcom-19) Failed to access library './fcgru_fsmd' at "./fcgru_fsmd".
+No such file or directory. (errno = ENOENT)
+End time: 13:56:02 on Sep 23,2018, Elapsed time: 0:00:00
+Errors: 1, Warnings: 0
+
+} {} {}} C:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/fcgru_fsmd.vhd {0 {vcom -work work -2002 -explicit C:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/fcgru_fsmd.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+Start time: 13:56:02 on Sep 23,2018
+vcom -reportprogress 300 -work work -2002 -explicit C:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/fcgru_fsmd.vhd 
+** Error (suppressible): (vcom-19) Failed to access library './fcgru_fsmd' at "./fcgru_fsmd".
+No such file or directory. (errno = ENOENT)
+End time: 13:56:02 on Sep 23,2018, Elapsed time: 0:00:00
+Errors: 1, Warnings: 0
+
 } {} {}} C:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/dotp_fsmd_rtl.vhd {0 {vcom -work work -2002 -explicit C:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/dotp_fsmd_rtl.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 Start time: 13:56:02 on Sep 23,2018
@@ -70,19 +70,19 @@ No such file or directory. (errno = ENOENT)
 End time: 13:56:02 on Sep 23,2018, Elapsed time: 0:00:00
 Errors: 1, Warnings: 0
 
-} {} {}} {{C:/Users/Jan Snoeijs/Desktop/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/gru_fsmd.vhd}} {0 {vcom -work work -2008 -explicit {C:/Users/Jan Snoeijs/Desktop/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/gru_fsmd.vhd}
+} {} {}} {{C:/Users/Jan Snoeijs/Desktop/SEMESTER_PROJECT_FILES/ANNonFPGA/TBENCH/fcgru_fsmd_tb.vhd}} {0 {vcom -work work -2008 -explicit {C:/Users/Jan Snoeijs/Desktop/SEMESTER_PROJECT_FILES/ANNonFPGA/TBENCH/fcgru_fsmd_tb.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 Start time: 13:50:55 on Sep 23,2018
-vcom -reportprogress 300 -work work -2008 -explicit C:/Users/Jan Snoeijs/Desktop/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/gru_fsmd.vhd 
+vcom -reportprogress 300 -work work -2008 -explicit C:/Users/Jan Snoeijs/Desktop/SEMESTER_PROJECT_FILES/ANNonFPGA/TBENCH/fcgru_fsmd_tb.vhd 
 ** Error (suppressible): (vcom-19) Failed to access library './fcgru_fsmd' at "./fcgru_fsmd".
 No such file or directory. (errno = ENOENT)
 End time: 13:50:55 on Sep 23,2018, Elapsed time: 0:00:00
 Errors: 1, Warnings: 0
 
-} {} {}} {{C:/Users/Jan Snoeijs/Desktop/SEMESTER_PROJECT_FILES/ANNonFPGA/TBENCH/fcgru_fsmd_tb.vhd}} {0 {vcom -work work -2008 -explicit {C:/Users/Jan Snoeijs/Desktop/SEMESTER_PROJECT_FILES/ANNonFPGA/TBENCH/fcgru_fsmd_tb.vhd}
+} {} {}} {{C:/Users/Jan Snoeijs/Desktop/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/gru_fsmd.vhd}} {0 {vcom -work work -2008 -explicit {C:/Users/Jan Snoeijs/Desktop/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/gru_fsmd.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 Start time: 13:50:55 on Sep 23,2018
-vcom -reportprogress 300 -work work -2008 -explicit C:/Users/Jan Snoeijs/Desktop/SEMESTER_PROJECT_FILES/ANNonFPGA/TBENCH/fcgru_fsmd_tb.vhd 
+vcom -reportprogress 300 -work work -2008 -explicit C:/Users/Jan Snoeijs/Desktop/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/gru_fsmd.vhd 
 ** Error (suppressible): (vcom-19) Failed to access library './fcgru_fsmd' at "./fcgru_fsmd".
 No such file or directory. (errno = ENOENT)
 End time: 13:50:55 on Sep 23,2018, Elapsed time: 0:00:00
