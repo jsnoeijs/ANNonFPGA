@@ -1,6 +1,6 @@
 Flow report for NN-ESD
-Sun Oct 14 19:12:38 2018
-Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+Wed Oct 17 15:43:47 2018
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
 ---------------------
@@ -21,7 +21,7 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2016  Intel Corporation. All rights reserved.
+Copyright (C) 2018  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -29,27 +29,26 @@ functions, and any output files from any of the foregoing
 associated documentation or information are expressly subject 
 to the terms and conditions of the Intel Program License 
 Subscription Agreement, the Intel Quartus Prime License Agreement,
-the Intel MegaCore Function License Agreement, or other 
-applicable license agreement, including, without limitation, 
-that your use is for the sole purpose of programming logic 
-devices manufactured by Intel and sold by Intel or its 
-authorized distributors.  Please refer to the applicable 
-agreement for further details.
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
 
 
 
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sun Oct 14 19:11:50 2018       ;
-; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
+; Flow Status                     ; Successful - Wed Oct 17 15:43:23 2018       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; NN-ESD                                      ;
 ; Top-level Entity Name           ; DE10_Standard                               ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSXFC6D6F31C6                              ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; 424 / 41,910 ( 1 % )                        ;
-; Total registers                 ; 797                                         ;
+; Total registers                 ; 795                                         ;
 ; Total pins                      ; 153 / 499 ( 31 % )                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 1,024 / 5,662,720 ( < 1 % )                 ;
@@ -68,7 +67,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/14/2018 19:06:52 ;
+; Start date & time ; 10/17/2018 15:40:44 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; NN-ESD              ;
 +-------------------+---------------------+
@@ -79,7 +78,7 @@ agreement for further details.
 +---------------------------------------+----------------------------------------+---------------+---------------+------------+
 ; Assignment Name                       ; Value                                  ; Default Value ; Entity Name   ; Section Id ;
 +---------------------------------------+----------------------------------------+---------------+---------------+------------+
-; COMPILER_SIGNATURE_ID                 ; 18121611603041.153953681207236         ; --            ; --            ; --         ;
+; COMPILER_SIGNATURE_ID                 ; 18121611603041.153978364323616         ; --            ; --            ; --         ;
 ; ECO_REGENERATE_REPORT                 ; On                                     ; Off           ; --            ; --         ;
 ; MAX_CORE_JUNCTION_TEMP                ; 85                                     ; --            ; --            ; --         ;
 ; MIN_CORE_JUNCTION_TEMP                ; 0                                      ; --            ; --            ; --         ;
@@ -94,29 +93,29 @@ agreement for further details.
 +---------------------------------------+----------------------------------------+---------------+---------------+------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                             ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:02:32     ; 1.0                     ; 5127 MB             ; 00:04:55                           ;
-; Fitter                    ; 00:02:02     ; 1.1                     ; 7493 MB             ; 00:03:08                           ;
-; Assembler                 ; 00:00:13     ; 1.0                     ; 4910 MB             ; 00:00:12                           ;
-; TimeQuest Timing Analyzer ; 00:00:46     ; 1.1                     ; 5651 MB             ; 00:00:47                           ;
-; Total                     ; 00:05:33     ; --                      ; --                  ; 00:09:02                           ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:01:25     ; 1.0                     ; 1307 MB             ; 00:03:03                           ;
+; Fitter               ; 00:01:02     ; 1.1                     ; 3271 MB             ; 00:01:35                           ;
+; Assembler            ; 00:00:07     ; 1.0                     ; 1004 MB             ; 00:00:07                           ;
+; Timing Analyzer      ; 00:00:22     ; 1.1                     ; 1688 MB             ; 00:00:25                           ;
+; Total                ; 00:02:56     ; --                      ; --                  ; 00:05:10                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
 +----------------------------------------------------------------------------------------+
 ; Flow OS Summary                                                                        ;
-+---------------------------+------------------+-----------+------------+----------------+
-; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
-+---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; DESKTOP-5APNOD1  ; Windows 8 ; 6.2        ; x86_64         ;
-; Fitter                    ; DESKTOP-5APNOD1  ; Windows 8 ; 6.2        ; x86_64         ;
-; Assembler                 ; DESKTOP-5APNOD1  ; Windows 8 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; DESKTOP-5APNOD1  ; Windows 8 ; 6.2        ; x86_64         ;
-+---------------------------+------------------+-----------+------------+----------------+
++----------------------+------------------+----------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
++----------------------+------------------+----------------+------------+----------------+
+; Analysis & Synthesis ; jan-DU5          ; Ubuntu 16.04.4 ; 16         ; x86_64         ;
+; Fitter               ; jan-DU5          ; Ubuntu 16.04.4 ; 16         ; x86_64         ;
+; Assembler            ; jan-DU5          ; Ubuntu 16.04.4 ; 16         ; x86_64         ;
+; Timing Analyzer      ; jan-DU5          ; Ubuntu 16.04.4 ; 16         ; x86_64         ;
++----------------------+------------------+----------------+------------+----------------+
 
 
 ------------

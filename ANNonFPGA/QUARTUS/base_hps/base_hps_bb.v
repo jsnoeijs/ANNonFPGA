@@ -23,6 +23,7 @@ module base_hps (
 	hps_io_hps_io_sdio_inst_D3,
 	hps_io_hps_io_uart0_inst_RX,
 	hps_io_hps_io_uart0_inst_TX,
+	leds_export,
 	memory_mem_a,
 	memory_mem_ba,
 	memory_mem_ck,
@@ -39,8 +40,7 @@ module base_hps (
 	memory_mem_odt,
 	memory_mem_dm,
 	memory_oct_rzqin,
-	reset_reset_n,
-	leds_export);	
+	reset_reset_n);	
 
 	input		clk_clk;
 	output		hps_io_hps_io_emac0_inst_TX_CLK;
@@ -65,6 +65,7 @@ module base_hps (
 	inout		hps_io_hps_io_sdio_inst_D3;
 	input		hps_io_hps_io_uart0_inst_RX;
 	output		hps_io_hps_io_uart0_inst_TX;
+	output	[7:0]	leds_export;
 	output	[14:0]	memory_mem_a;
 	output	[2:0]	memory_mem_ba;
 	output		memory_mem_ck;
@@ -82,5 +83,4 @@ module base_hps (
 	output	[3:0]	memory_mem_dm;
 	input		memory_oct_rzqin;
 	input		reset_reset_n;
-	output	[7:0]	leds_export;
 endmodule

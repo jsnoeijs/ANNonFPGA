@@ -1,12 +1,12 @@
-Fitter Status : Successful - Sun Oct 14 19:11:32 2018
-Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+Fitter Status : Successful - Wed Oct 17 15:43:13 2018
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : NN-ESD
 Top-level Entity Name : DE10_Standard
 Family : Cyclone V
 Device : 5CSXFC6D6F31C6
 Timing Models : Final
 Logic utilization (in ALMs) : 424 / 41,910 ( 1 % )
-Total registers : 797
+Total registers : 795
 Total pins : 153 / 499 ( 31 % )
 Total virtual pins : 0
 Total block memory bits : 1,024 / 5,662,720 ( < 1 % )

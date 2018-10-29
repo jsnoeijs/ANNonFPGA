@@ -22,6 +22,7 @@
 		.hps_io_hps_io_sdio_inst_D3      (<connected-to-hps_io_hps_io_sdio_inst_D3>),      //       .hps_io_sdio_inst_D3
 		.hps_io_hps_io_uart0_inst_RX     (<connected-to-hps_io_hps_io_uart0_inst_RX>),     //       .hps_io_uart0_inst_RX
 		.hps_io_hps_io_uart0_inst_TX     (<connected-to-hps_io_hps_io_uart0_inst_TX>),     //       .hps_io_uart0_inst_TX
+		.leds_export                     (<connected-to-leds_export>),                     //   leds.export
 		.memory_mem_a                    (<connected-to-memory_mem_a>),                    // memory.mem_a
 		.memory_mem_ba                   (<connected-to-memory_mem_ba>),                   //       .mem_ba
 		.memory_mem_ck                   (<connected-to-memory_mem_ck>),                   //       .mem_ck
@@ -38,7 +39,6 @@
 		.memory_mem_odt                  (<connected-to-memory_mem_odt>),                  //       .mem_odt
 		.memory_mem_dm                   (<connected-to-memory_mem_dm>),                   //       .mem_dm
 		.memory_oct_rzqin                (<connected-to-memory_oct_rzqin>),                //       .oct_rzqin
-		.reset_reset_n                   (<connected-to-reset_reset_n>),                   //  reset.reset_n
-		.leds_export                     (<connected-to-leds_export>)                      //   leds.export
+		.reset_reset_n                   (<connected-to-reset_reset_n>)                    //  reset.reset_n
 	);
 

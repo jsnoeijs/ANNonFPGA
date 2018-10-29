@@ -147,7 +147,7 @@
 /*
  * To configure whether to scrub the SDRAM to initialize the ECC bits
  */
-#define CONFIG_PRELOADER_SDRAM_SCRUBBING    (0)
+#define CONFIG_PRELOADER_SDRAM_SCRUBBING    (1)
 
 /* To configure whether to scrub the SDRAM to initialize the ECC bits */
 #if (CONFIG_PRELOADER_SDRAM_SCRUBBING == 1)

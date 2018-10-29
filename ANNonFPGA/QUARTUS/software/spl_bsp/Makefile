@@ -13,9 +13,9 @@
 # Generated Variables
 #
 
-PRELOADER_SETTINGS_DIR := ../../hps_isw_handoff/base_hps_hps_0/
+PRELOADER_SETTINGS_DIR := ../../hps_isw_handoff/base_hps_hps_0
 
-TGZ := uboot-socfpga.tar.gz
+TGZ := $(SOCEDS_DEST_ROOT)/host_tools/altera/preloader/uboot-socfpga.tar.gz
 
 CROSS_COMPILE := arm-linux-gnueabihf-
 
@@ -212,8 +212,8 @@ tools: $(CONFIG)
 src: $(UNTAR_SRC)
 
 $(UNTAR_SRC): $(TGZ)
-	#@$(RM) $(PRELOADER_SRC_DIR)
-	#$(untar_recipe)
+	@$(RM) $(PRELOADER_SRC_DIR)
+	$(untar_recipe)
 	@$(CHMOD) -R 755 $(PRELOADER_SRC_DIR)
 	$(stamp)
 
@@ -221,7 +221,6 @@ $(UNTAR_SRC): $(TGZ)
 # Update
 .PHONY: update-src
 update-src: $(UPDATE_SRC)
-	@$(CHMOD) -R 755 $(PRELOADER_SRC_DIR)
 
 UPDATE_SRC += $(UPDATE_GENERATED_SOURCE_FILES) $(UPDATE_SDRAM_SOURCE_FILES)
 

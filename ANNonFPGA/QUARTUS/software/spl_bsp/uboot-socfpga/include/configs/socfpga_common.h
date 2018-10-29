@@ -168,7 +168,7 @@
 #ifdef CONFIG_SOCFPGA_VIRTUAL_TARGET
 #define CONFIG_BOOTCOMMAND "run ramboot"
 #else
-#define CONFIG_BOOTCOMMAND "run callscript; run mmcload; run mmcboot"
+#define CONFIG_BOOTCOMMAND "run callscript"
 #endif
 
 /*
@@ -179,6 +179,8 @@
 #define CONFIG_BOOTARGS "console=ttyS0," __stringify(CONFIG_BAUDRATE)
 
 #define CONFIG_EXTRA_ENV_SETTINGS \
+	"axibridge=ffd0501c\0" \
+	"axibridge_handoff=0x00000000\0" \
 	"verify=n\0" \
 	"loadaddr=" __stringify(CONFIG_SYS_LOAD_ADDR) "\0" \
 	"fdtaddr=0x00000100\0" \
@@ -220,8 +222,18 @@
 		" root=${nandroot} rw rootfstype=${nandrootfstype};"\
 		"bootz ${loadaddr} - ${fdtaddr}\0" \
 	"fpga=0\0" \
+	"fpga2sdram=ffc25080\0" \
+	"fpga2sdram_apply=3ff795a4\0" \
+	"fpga2sdram_handoff=0x00000000\0" \
 	"fpgadata=0x2000000\0" \
 	"fpgadatasize=0x700000\0" \
+	"fpgaintf=ffd08028\0" \
+	"fpgaintf_handoff=0x00000000\0" \
+	"l3remap=ff800000\0" \
+	"l3remap_handoff=0x00000019\0" \
+	"bridge_enable_handoff=mw $fpgaintf ${fpgaintf_handoff};"\
+				" mw $axibridge ${axibridge_handoff};"\
+				"mw $l3remap ${l3remap_handoff};\0" \
 	CONFIG_KSZ9021_CLK_SKEW_ENV "=" \
 		__stringify(CONFIG_KSZ9021_CLK_SKEW_VAL) "\0" \
 	CONFIG_KSZ9021_DATA_SKEW_ENV "=" \

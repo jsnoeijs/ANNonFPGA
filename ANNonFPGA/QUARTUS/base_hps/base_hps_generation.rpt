@@ -1,16 +1,16 @@
 Info: Starting: Create block symbol file (.bsf)
-Info: qsys-generate C:\Users\jan_snoeijs\home\EPFL\Master_3\SEMESTER_PROJECT_FILES\ANNonFPGA\ANNonFPGA\QUARTUS\base_hps.qsys --block-symbol-file --output-directory=C:\Users\jan_snoeijs\home\EPFL\Master_3\SEMESTER_PROJECT_FILES\ANNonFPGA\ANNonFPGA\QUARTUS\base_hps --family="Cyclone V" --part=5CSXFC6D6F31C6
+Info: qsys-generate /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/base_hps.qsys --block-symbol-file --output-directory=/home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/base_hps --family="Cyclone V" --part=5CSXFC6D6F31C6
 Progress: Loading QUARTUS/base_hps.qsys
 Progress: Reading input file
-Progress: Adding clk_0 [clock_source 17.0]
+Progress: Adding clk_0 [clock_source 18.1]
 Progress: Parameterizing module clk_0
-Progress: Adding hps_0 [altera_hps 17.0]
+Progress: Adding hps_0 [altera_hps 18.1]
 Progress: Parameterizing module hps_0
-Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 17.0]
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
 Progress: Parameterizing module jtag_uart_0
-Progress: Adding pio_0 [altera_avalon_pio 17.0]
+Progress: Adding pio_0 [altera_avalon_pio 18.1]
 Progress: Parameterizing module pio_0
-Progress: Adding pll_0 [altera_pll 17.0]
+Progress: Adding pll_0 [altera_pll 18.1]
 Progress: Parameterizing module pll_0
 Progress: Building connections
 Progress: Parameterizing connections
@@ -27,18 +27,18 @@ Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
 Info: Starting: Create HDL design files for synthesis
-Info: qsys-generate C:\Users\jan_snoeijs\home\EPFL\Master_3\SEMESTER_PROJECT_FILES\ANNonFPGA\ANNonFPGA\QUARTUS\base_hps.qsys --synthesis=VHDL --output-directory=C:\Users\jan_snoeijs\home\EPFL\Master_3\SEMESTER_PROJECT_FILES\ANNonFPGA\ANNonFPGA\QUARTUS\base_hps\synthesis --family="Cyclone V" --part=5CSXFC6D6F31C6
+Info: qsys-generate /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/base_hps.qsys --synthesis=VHDL --output-directory=/home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/base_hps/synthesis --family="Cyclone V" --part=5CSXFC6D6F31C6
 Progress: Loading QUARTUS/base_hps.qsys
 Progress: Reading input file
-Progress: Adding clk_0 [clock_source 17.0]
+Progress: Adding clk_0 [clock_source 18.1]
 Progress: Parameterizing module clk_0
-Progress: Adding hps_0 [altera_hps 17.0]
+Progress: Adding hps_0 [altera_hps 18.1]
 Progress: Parameterizing module hps_0
-Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 17.0]
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
 Progress: Parameterizing module jtag_uart_0
-Progress: Adding pio_0 [altera_avalon_pio 17.0]
+Progress: Adding pio_0 [altera_avalon_pio 18.1]
 Progress: Parameterizing module pio_0
-Progress: Adding pll_0 [altera_pll 17.0]
+Progress: Adding pll_0 [altera_pll 18.1]
 Progress: Parameterizing module pll_0
 Progress: Building connections
 Progress: Parameterizing connections
@@ -63,11 +63,11 @@ Warning: hps_0: "Configuration/HPS-to-FPGA user 0 clock frequency" (desired_cfg_
 Warning: hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
 Info: hps_0: "base_hps" instantiated altera_hps "hps_0"
 Info: jtag_uart_0: Starting RTL generation for module 'base_hps_jtag_uart_0'
-Info: jtag_uart_0:   Generation command is [exec C:/intelfpga_lite/17.0/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.0/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=base_hps_jtag_uart_0 --dir=C:/Users/JANSNO~1/AppData/Local/Temp/alt7816_7332719400917715727.dir/0001_jtag_uart_0_gen/ --quartus_dir=C:/intelfpga_lite/17.0/quartus --verilog --config=C:/Users/JANSNO~1/AppData/Local/Temp/alt7816_7332719400917715727.dir/0001_jtag_uart_0_gen//base_hps_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart_0:   Generation command is [exec /home/jan/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/jan/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/jan/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/jan/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/jan/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/jan/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/jan/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/jan/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=base_hps_jtag_uart_0 --dir=/tmp/alt7821_1442570674191881879.dir/0002_jtag_uart_0_gen/ --quartus_dir=/home/jan/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt7821_1442570674191881879.dir/0002_jtag_uart_0_gen//base_hps_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
 Info: jtag_uart_0: Done RTL generation for module 'base_hps_jtag_uart_0'
 Info: jtag_uart_0: "base_hps" instantiated altera_avalon_jtag_uart "jtag_uart_0"
 Info: pio_0: Starting RTL generation for module 'base_hps_pio_0'
-Info: pio_0:   Generation command is [exec C:/intelfpga_lite/17.0/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.0/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.0/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=base_hps_pio_0 --dir=C:/Users/JANSNO~1/AppData/Local/Temp/alt7816_7332719400917715727.dir/0002_pio_0_gen/ --quartus_dir=C:/intelfpga_lite/17.0/quartus --verilog --config=C:/Users/JANSNO~1/AppData/Local/Temp/alt7816_7332719400917715727.dir/0002_pio_0_gen//base_hps_pio_0_component_configuration.pl  --do_build_sim=0  ]
+Info: pio_0:   Generation command is [exec /home/jan/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/jan/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/jan/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/jan/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/jan/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/jan/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/jan/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/jan/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=base_hps_pio_0 --dir=/tmp/alt7821_1442570674191881879.dir/0003_pio_0_gen/ --quartus_dir=/home/jan/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt7821_1442570674191881879.dir/0003_pio_0_gen//base_hps_pio_0_component_configuration.pl  --do_build_sim=0  ]
 Info: pio_0: Done RTL generation for module 'base_hps_pio_0'
 Info: pio_0: "base_hps" instantiated altera_avalon_pio "pio_0"
 Info: pll_0: "base_hps" instantiated altera_pll "pll_0"
@@ -86,15 +86,15 @@ Info: jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo: "mm_interconnect_0" instanti
 Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
 Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
 Info: hps_0_h2f_lw_axi_master_wr_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "hps_0_h2f_lw_axi_master_wr_limiter"
-Info: Reusing file C:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/ANNonFPGA/QUARTUS/base_hps/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: Reusing file /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/base_hps/synthesis/submodules/altera_avalon_sc_fifo.v
 Info: jtag_uart_0_avalon_jtag_slave_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "jtag_uart_0_avalon_jtag_slave_burst_adapter"
-Info: Reusing file C:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/ANNonFPGA/QUARTUS/base_hps/synthesis/submodules/altera_merlin_address_alignment.sv
-Info: Reusing file C:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/ANNonFPGA/QUARTUS/base_hps/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: Reusing file /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/base_hps/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/base_hps/synthesis/submodules/altera_avalon_st_pipeline_base.v
 Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file C:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/ANNonFPGA/QUARTUS/base_hps/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/base_hps/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
 Info: border: "hps_io" instantiated altera_interface_generator "border"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
