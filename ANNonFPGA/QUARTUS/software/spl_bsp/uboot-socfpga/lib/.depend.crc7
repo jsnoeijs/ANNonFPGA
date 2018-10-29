@@ -1,0 +1,8 @@
+crc7.o: crc7.c \
+ /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/software/spl_bsp/uboot-socfpga/include/linux/types.h \
+ /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/software/spl_bsp/uboot-socfpga/include/linux/config.h \
+ /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/software/spl_bsp/uboot-socfpga/include/linux/posix_types.h \
+ /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/software/spl_bsp/uboot-socfpga/include/linux/stddef.h \
+ /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/software/spl_bsp/uboot-socfpga/include/asm/posix_types.h \
+ /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/software/spl_bsp/uboot-socfpga/include/asm/types.h \
+ /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/software/spl_bsp/uboot-socfpga/include/linux/crc7.h

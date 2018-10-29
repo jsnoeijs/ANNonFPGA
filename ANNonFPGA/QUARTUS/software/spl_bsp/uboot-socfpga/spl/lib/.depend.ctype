@@ -1,0 +1,3 @@
+/home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/software/spl_bsp/uboot-socfpga/spl/lib/ctype.o: \
+ ctype.c \
+ /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/software/spl_bsp/uboot-socfpga/include/linux/ctype.h

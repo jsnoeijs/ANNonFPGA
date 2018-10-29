@@ -8,6 +8,15 @@ z2
 !i10f 100
 cModel Technology
 dC:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/MODELSIM/FCGRU
+T_opt
+!s110 1538493981
+VG3=j_O`REO5@1J^3ZQ]SO2
+04 13 5 work fcgru_fsmd_tb bench 1
+=1-107b4438ec61-5bb38e1d-27e-97c
+o-quiet -auto_acc_if_foreign -work gru_rtl
+tCvgOpt 0
+n@_opt
+OL;O;10.5c;63
 Edotp_fsmd
 Z0 w1527858306
 Z1 DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
@@ -169,7 +178,7 @@ R1
 R2
 R3
 R4
-Z35 DEx4 work 13 fcgru_fsmd_tb 0 22 d1>niLVDo5KXnYaCH1OlW1
+DEx4 work 13 fcgru_fsmd_tb 0 22 d1>niLVDo5KXnYaCH1OlW1
 l63
 L11
 Vi]]RM710hK?e0MhUYP]2:0
@@ -185,14 +194,14 @@ R34
 R13
 R14
 Egru
-Z36 w1527878028
+Z35 w1527878028
 R1
 R2
 R3
 R4
 R5
-Z37 8C:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/gru_fsmd.vhd
-Z38 FC:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/gru_fsmd.vhd
+Z36 8C:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/gru_fsmd.vhd
+Z37 FC:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/gru_fsmd.vhd
 l0
 L10
 VSV_`A:cYUE0EfSh>jE;7=0
@@ -202,8 +211,8 @@ R8
 R9
 !i10b 1
 R10
-Z39 !s90 -reportprogress|300|-work|gru_rtl|-2002|-explicit|-stats=none|C:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/gru_fsmd.vhd|
-Z40 !s107 C:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/gru_fsmd.vhd|
+Z38 !s90 -reportprogress|300|-work|gru_rtl|-2002|-explicit|-stats=none|C:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/gru_fsmd.vhd|
+Z39 !s107 C:/Users/jan_snoeijs/home/EPFL/Master_3/SEMESTER_PROJECT_FILES/ANNonFPGA/RTL/gru_fsmd.vhd|
 !i113 1
 R13
 R14
@@ -224,8 +233,8 @@ R8
 R9
 !i10b 1
 R10
+R38
 R39
-R40
 !i113 1
 R13
 R14
