@@ -198,7 +198,7 @@ file = 17
 X_test=np.zeros((seq_number, timesteps, input_size_new, batch_size_new, 1))
 
 
-initial_time = 800000
+initial_time = 4000
 
 for i in range(0,seq_number):
     for j in range(0,timesteps):
@@ -215,7 +215,7 @@ X_test = X_test/max_value_2
 
 
 yhat_test = model.predict(X_test, verbose=0)
-file2 = open("CNN_LSTM_dataset_test_17_dataset_non_onset_GRU.txt", 'ab')
+file2 = open("CNN_GRU_17_keras.txt", 'w')
 np.savetxt(file2, yhat_test, delimiter="," )
 file2.close()
 

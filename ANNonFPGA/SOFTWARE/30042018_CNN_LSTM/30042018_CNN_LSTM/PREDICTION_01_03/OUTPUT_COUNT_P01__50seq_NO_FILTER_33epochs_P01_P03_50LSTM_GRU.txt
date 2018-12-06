@@ -1,0 +1,26 @@
+_50seq_NO_FILTER_33epochs_P01_P03_50LSTM_GRU
+data_set inter-ictal pre-ictal ictal 
+     0      42      8       0
+     1      48      2       0
+     2      31      14       4
+     3      42      7       0
+     4      37      13       0
+     5      39      11       0
+     6      49      1       0
+     7      41      8       0
+     8      35      14       0
+     9      23      3       24
+     10      43      5       0
+     11      50      0       0
+     12      44      6       0
+     13      42      7       0
+     14      47      3       0
+     15      41      9       0
+     16      49      1       0
+     17      30      20       0
+     18      50      0       0
+     19      48      1       0
+TOTAL FALSE ICTAL    28
+TOTAL FALSE PRE ICTAL 130
+TOTAL DATASET WITH FALSE ICTAL    16
+TOTAL DATASET WITH FALSE PRE ICTAL 2

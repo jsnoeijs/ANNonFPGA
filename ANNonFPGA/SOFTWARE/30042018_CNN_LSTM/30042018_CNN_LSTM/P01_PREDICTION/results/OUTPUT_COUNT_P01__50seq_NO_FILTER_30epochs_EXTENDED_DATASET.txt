@@ -1,0 +1,26 @@
+_50seq_NO_FILTER_30epochs_EXTENDED_DATASET
+data_set inter-ictal pre-ictal ictal 
+     0      50      0       0
+     1      19      30       1
+     2      49      1       0
+     3      47      3       0
+     4      44      5       0
+     5      50      0       0
+     6      14      30       3
+     7      45      5       0
+     8      24      1       24
+     9      48      2       0
+     10      42      8       0
+     11      45      4       0
+     12      46      4       0
+     13      43      6       1
+     14      12      37       0
+     15      1      49       0
+     16      44      6       0
+     17      50      0       0
+     18      50      0       0
+     19      29      21       0
+TOTAL FALSE ICTAL    25
+TOTAL FALSE PRE ICTAL 152
+TOTAL DATASET WITH FALSE ICTAL    14
+TOTAL DATASET WITH FALSE PRE ICTAL 2

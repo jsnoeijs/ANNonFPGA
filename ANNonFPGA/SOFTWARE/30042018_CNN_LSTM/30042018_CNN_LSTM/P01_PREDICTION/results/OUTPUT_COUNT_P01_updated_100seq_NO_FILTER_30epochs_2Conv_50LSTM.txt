@@ -1,0 +1,26 @@
+updated_100seq_NO_FILTER_30epochs_2Conv_50LSTM
+data_set inter-ictal pre-ictal ictal 
+     0      100      0       0
+     1      90      8       1
+     2      100      0       0
+     3      97      3       0
+     4      96      4       0
+     5      100      0       0
+     6      80      18       2
+     7      89      0       11
+     8      76      0       24
+     9      99      0       0
+     10      100      0       0
+     11      94      4       0
+     12      99      1       0
+     13      91      9       0
+     14      71      22       0
+     15      51      44       0
+     16      93      6       0
+     17      100      0       0
+     18      100      0       0
+     19      78      21       0
+TOTAL FALSE ICTAL    35
+TOTAL FALSE PRE ICTAL 114
+TOTAL DATASET WITH FALSE ICTAL    9
+TOTAL DATASET WITH FALSE PRE ICTAL 2
