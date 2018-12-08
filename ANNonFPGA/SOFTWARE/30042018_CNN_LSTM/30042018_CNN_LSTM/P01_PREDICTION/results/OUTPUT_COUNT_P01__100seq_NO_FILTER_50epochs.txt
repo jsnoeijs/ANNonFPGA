@@ -1,0 +1,62 @@
+_100seq_NO_FILTER_50epochs
+data_set inter-ictal pre-ictal ictal 
+     0      100      0       0
+ False ictal     0
+ False pre_ictal 0
+     1      75      20       5
+     2      99      1       0
+ False ictal     0
+ False pre_ictal 39
+     3      97      3       0
+ False ictal     0
+ False pre_ictal 172
+     4      94      6       0
+ False ictal     0
+ False pre_ictal 648
+     5      100      0       0
+ False ictal     0
+ False pre_ictal 648
+     6      74      19       7
+     7      87      1       12
+ False ictal     354
+ False pre_ictal 685
+     8      76      0       24
+ False ictal     2478
+ False pre_ictal 685
+     9      98      2       0
+ False ictal     2478
+ False pre_ictal 719
+     10      99      1       0
+ False ictal     2478
+ False pre_ictal 812
+     11      94      6       0
+ False ictal     2478
+ False pre_ictal 994
+     12      98      2       0
+ False ictal     2478
+ False pre_ictal 1190
+     13      77      22       1
+ False ictal     2555
+ False pre_ictal 2333
+     14      56      44       0
+ False ictal     2555
+ False pre_ictal 4778
+     15      38      62       0
+ False ictal     2555
+ False pre_ictal 8499
+     16      85      15       0
+ False ictal     2555
+ False pre_ictal 9130
+     17      99      1       0
+ False ictal     2555
+ False pre_ictal 9225
+     18      100      0       0
+ False ictal     2555
+ False pre_ictal 9225
+     19      95      5       0
+ False ictal     2555
+ False pre_ictal 9506
+TOTAL FALSE ICTAL    0
+TOTAL FALSE PRE ICTAL9506
+TOTAL DATASET WITH FALSE ICTAL    13
+TOTAL DATASET WITH FALSE PRE ICTAL13
