@@ -30,75 +30,86 @@ module base_hps_hps_0_hps_io_border(
  ,output wire [4 - 1 : 0 ] mem_dm
  ,input wire [1 - 1 : 0 ] oct_rzqin
 // hps_io
- ,output wire [1 - 1 : 0 ] hps_io_emac0_inst_TX_CLK
- ,output wire [1 - 1 : 0 ] hps_io_emac0_inst_TXD0
- ,output wire [1 - 1 : 0 ] hps_io_emac0_inst_TXD1
- ,output wire [1 - 1 : 0 ] hps_io_emac0_inst_TXD2
- ,output wire [1 - 1 : 0 ] hps_io_emac0_inst_TXD3
- ,input wire [1 - 1 : 0 ] hps_io_emac0_inst_RXD0
- ,inout wire [1 - 1 : 0 ] hps_io_emac0_inst_MDIO
- ,output wire [1 - 1 : 0 ] hps_io_emac0_inst_MDC
- ,input wire [1 - 1 : 0 ] hps_io_emac0_inst_RX_CTL
- ,output wire [1 - 1 : 0 ] hps_io_emac0_inst_TX_CTL
- ,input wire [1 - 1 : 0 ] hps_io_emac0_inst_RX_CLK
- ,input wire [1 - 1 : 0 ] hps_io_emac0_inst_RXD1
- ,input wire [1 - 1 : 0 ] hps_io_emac0_inst_RXD2
- ,input wire [1 - 1 : 0 ] hps_io_emac0_inst_RXD3
+ ,output wire [1 - 1 : 0 ] hps_io_emac1_inst_TX_CLK
+ ,output wire [1 - 1 : 0 ] hps_io_emac1_inst_TXD0
+ ,output wire [1 - 1 : 0 ] hps_io_emac1_inst_TXD1
+ ,output wire [1 - 1 : 0 ] hps_io_emac1_inst_TXD2
+ ,output wire [1 - 1 : 0 ] hps_io_emac1_inst_TXD3
+ ,input wire [1 - 1 : 0 ] hps_io_emac1_inst_RXD0
+ ,inout wire [1 - 1 : 0 ] hps_io_emac1_inst_MDIO
+ ,output wire [1 - 1 : 0 ] hps_io_emac1_inst_MDC
+ ,input wire [1 - 1 : 0 ] hps_io_emac1_inst_RX_CTL
+ ,output wire [1 - 1 : 0 ] hps_io_emac1_inst_TX_CTL
+ ,input wire [1 - 1 : 0 ] hps_io_emac1_inst_RX_CLK
+ ,input wire [1 - 1 : 0 ] hps_io_emac1_inst_RXD1
+ ,input wire [1 - 1 : 0 ] hps_io_emac1_inst_RXD2
+ ,input wire [1 - 1 : 0 ] hps_io_emac1_inst_RXD3
  ,inout wire [1 - 1 : 0 ] hps_io_sdio_inst_CMD
  ,inout wire [1 - 1 : 0 ] hps_io_sdio_inst_D0
  ,inout wire [1 - 1 : 0 ] hps_io_sdio_inst_D1
  ,output wire [1 - 1 : 0 ] hps_io_sdio_inst_CLK
  ,inout wire [1 - 1 : 0 ] hps_io_sdio_inst_D2
  ,inout wire [1 - 1 : 0 ] hps_io_sdio_inst_D3
+ ,output wire [1 - 1 : 0 ] hps_io_spim1_inst_CLK
+ ,output wire [1 - 1 : 0 ] hps_io_spim1_inst_MOSI
+ ,input wire [1 - 1 : 0 ] hps_io_spim1_inst_MISO
+ ,output wire [1 - 1 : 0 ] hps_io_spim1_inst_SS0
  ,input wire [1 - 1 : 0 ] hps_io_uart0_inst_RX
  ,output wire [1 - 1 : 0 ] hps_io_uart0_inst_TX
+ ,inout wire [1 - 1 : 0 ] hps_io_gpio_inst_GPIO35
+ ,inout wire [1 - 1 : 0 ] hps_io_gpio_inst_GPIO54
 );
 
-assign hps_io_emac0_inst_MDIO = intermediate[1] ? intermediate[0] : 'z;
+assign hps_io_emac1_inst_MDIO = intermediate[1] ? intermediate[0] : 'z;
 assign hps_io_sdio_inst_CMD = intermediate[3] ? intermediate[2] : 'z;
 assign hps_io_sdio_inst_D0 = intermediate[5] ? intermediate[4] : 'z;
 assign hps_io_sdio_inst_D1 = intermediate[7] ? intermediate[6] : 'z;
 assign hps_io_sdio_inst_D2 = intermediate[9] ? intermediate[8] : 'z;
 assign hps_io_sdio_inst_D3 = intermediate[11] ? intermediate[10] : 'z;
+assign hps_io_spim1_inst_MOSI = intermediate[13] ? intermediate[12] : 'z;
+assign hps_io_gpio_inst_GPIO35 = intermediate[15] ? intermediate[14] : 'z;
+assign hps_io_gpio_inst_GPIO54 = intermediate[17] ? intermediate[16] : 'z;
 
-wire [12 - 1 : 0] intermediate;
+wire [18 - 1 : 0] intermediate;
 
-cyclonev_hps_peripheral_emac emac0_inst(
+wire [72 - 1 : 0] floating;
+
+cyclonev_hps_peripheral_emac emac1_inst(
  .EMAC_GMII_MDO_I({
-    hps_io_emac0_inst_MDIO[0:0] // 0:0
+    hps_io_emac1_inst_MDIO[0:0] // 0:0
   })
 ,.EMAC_GMII_MDO_OE({
     intermediate[1:1] // 0:0
   })
 ,.EMAC_PHY_TXD({
-    hps_io_emac0_inst_TXD3[0:0] // 3:3
-   ,hps_io_emac0_inst_TXD2[0:0] // 2:2
-   ,hps_io_emac0_inst_TXD1[0:0] // 1:1
-   ,hps_io_emac0_inst_TXD0[0:0] // 0:0
+    hps_io_emac1_inst_TXD3[0:0] // 3:3
+   ,hps_io_emac1_inst_TXD2[0:0] // 2:2
+   ,hps_io_emac1_inst_TXD1[0:0] // 1:1
+   ,hps_io_emac1_inst_TXD0[0:0] // 0:0
   })
 ,.EMAC_CLK_TX({
-    hps_io_emac0_inst_TX_CLK[0:0] // 0:0
+    hps_io_emac1_inst_TX_CLK[0:0] // 0:0
   })
 ,.EMAC_PHY_RXDV({
-    hps_io_emac0_inst_RX_CTL[0:0] // 0:0
+    hps_io_emac1_inst_RX_CTL[0:0] // 0:0
   })
 ,.EMAC_PHY_RXD({
-    hps_io_emac0_inst_RXD3[0:0] // 3:3
-   ,hps_io_emac0_inst_RXD2[0:0] // 2:2
-   ,hps_io_emac0_inst_RXD1[0:0] // 1:1
-   ,hps_io_emac0_inst_RXD0[0:0] // 0:0
+    hps_io_emac1_inst_RXD3[0:0] // 3:3
+   ,hps_io_emac1_inst_RXD2[0:0] // 2:2
+   ,hps_io_emac1_inst_RXD1[0:0] // 1:1
+   ,hps_io_emac1_inst_RXD0[0:0] // 0:0
   })
 ,.EMAC_GMII_MDO_O({
     intermediate[0:0] // 0:0
   })
 ,.EMAC_GMII_MDC({
-    hps_io_emac0_inst_MDC[0:0] // 0:0
+    hps_io_emac1_inst_MDC[0:0] // 0:0
   })
 ,.EMAC_PHY_TX_OE({
-    hps_io_emac0_inst_TX_CTL[0:0] // 0:0
+    hps_io_emac1_inst_TX_CTL[0:0] // 0:0
   })
 ,.EMAC_CLK_RX({
-    hps_io_emac0_inst_RX_CLK[0:0] // 0:0
+    hps_io_emac1_inst_RX_CLK[0:0] // 0:0
   })
 );
 
@@ -137,12 +148,53 @@ cyclonev_hps_peripheral_sdmmc sdio_inst(
 );
 
 
+cyclonev_hps_peripheral_spi_master spim1_inst(
+ .SPI_MASTER_RXD({
+    hps_io_spim1_inst_MISO[0:0] // 0:0
+  })
+,.SPI_MASTER_TXD({
+    intermediate[12:12] // 0:0
+  })
+,.SPI_MASTER_SSI_OE_N({
+    intermediate[13:13] // 0:0
+  })
+,.SPI_MASTER_SCLK({
+    hps_io_spim1_inst_CLK[0:0] // 0:0
+  })
+,.SPI_MASTER_SS_0_N({
+    hps_io_spim1_inst_SS0[0:0] // 0:0
+  })
+);
+
+
 cyclonev_hps_peripheral_uart uart0_inst(
  .UART_RXD({
     hps_io_uart0_inst_RX[0:0] // 0:0
   })
 ,.UART_TXD({
     hps_io_uart0_inst_TX[0:0] // 0:0
+  })
+);
+
+
+cyclonev_hps_peripheral_gpio gpio_inst(
+ .GPIO1_PORTA_I({
+    hps_io_gpio_inst_GPIO54[0:0] // 25:25
+   ,floating[17:0] // 24:7
+   ,hps_io_gpio_inst_GPIO35[0:0] // 6:6
+   ,floating[23:18] // 5:0
+  })
+,.GPIO1_PORTA_OE({
+    intermediate[17:17] // 25:25
+   ,floating[41:24] // 24:7
+   ,intermediate[15:15] // 6:6
+   ,floating[47:42] // 5:0
+  })
+,.GPIO1_PORTA_O({
+    intermediate[16:16] // 25:25
+   ,floating[65:48] // 24:7
+   ,intermediate[14:14] // 6:6
+   ,floating[71:66] // 5:0
   })
 );
 

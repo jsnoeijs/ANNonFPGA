@@ -31,20 +31,20 @@
 
 /* pin MUX configuration data */
 unsigned long sys_mgr_init_table[CONFIG_HPS_PINMUX_NUM] = {
-	3, /* EMACIO0 */
-	3, /* EMACIO1 */
-	3, /* EMACIO2 */
-	3, /* EMACIO3 */
-	3, /* EMACIO4 */
-	3, /* EMACIO5 */
-	3, /* EMACIO6 */
-	3, /* EMACIO7 */
-	3, /* EMACIO8 */
-	3, /* EMACIO9 */
-	3, /* EMACIO10 */
-	3, /* EMACIO11 */
-	3, /* EMACIO12 */
-	3, /* EMACIO13 */
+	0, /* EMACIO0 */
+	0, /* EMACIO1 */
+	0, /* EMACIO2 */
+	0, /* EMACIO3 */
+	0, /* EMACIO4 */
+	0, /* EMACIO5 */
+	0, /* EMACIO6 */
+	0, /* EMACIO7 */
+	0, /* EMACIO8 */
+	0, /* EMACIO9 */
+	0, /* EMACIO10 */
+	0, /* EMACIO11 */
+	0, /* EMACIO12 */
+	0, /* EMACIO13 */
 	0, /* EMACIO14 */
 	0, /* EMACIO15 */
 	0, /* EMACIO16 */
@@ -78,10 +78,10 @@ unsigned long sys_mgr_init_table[CONFIG_HPS_PINMUX_NUM] = {
 	0, /* GENERALIO12 */
 	0, /* GENERALIO13 */
 	0, /* GENERALIO14 */
-	0, /* GENERALIO15 */
-	0, /* GENERALIO16 */
-	0, /* GENERALIO17 */
-	0, /* GENERALIO18 */
+	1, /* GENERALIO15 */
+	1, /* GENERALIO16 */
+	1, /* GENERALIO17 */
+	1, /* GENERALIO18 */
 	0, /* GENERALIO19 */
 	0, /* GENERALIO20 */
 	0, /* GENERALIO21 */
@@ -95,20 +95,20 @@ unsigned long sys_mgr_init_table[CONFIG_HPS_PINMUX_NUM] = {
 	0, /* GENERALIO29 */
 	0, /* GENERALIO30 */
 	0, /* GENERALIO31 */
-	0, /* MIXED1IO0 */
-	0, /* MIXED1IO1 */
-	0, /* MIXED1IO2 */
-	0, /* MIXED1IO3 */
-	0, /* MIXED1IO4 */
-	0, /* MIXED1IO5 */
-	0, /* MIXED1IO6 */
-	0, /* MIXED1IO7 */
-	0, /* MIXED1IO8 */
-	0, /* MIXED1IO9 */
-	0, /* MIXED1IO10 */
-	0, /* MIXED1IO11 */
-	0, /* MIXED1IO12 */
-	0, /* MIXED1IO13 */
+	2, /* MIXED1IO0 */
+	2, /* MIXED1IO1 */
+	2, /* MIXED1IO2 */
+	2, /* MIXED1IO3 */
+	2, /* MIXED1IO4 */
+	2, /* MIXED1IO5 */
+	2, /* MIXED1IO6 */
+	2, /* MIXED1IO7 */
+	2, /* MIXED1IO8 */
+	2, /* MIXED1IO9 */
+	2, /* MIXED1IO10 */
+	2, /* MIXED1IO11 */
+	2, /* MIXED1IO12 */
+	2, /* MIXED1IO13 */
 	0, /* MIXED1IO14 */
 	0, /* MIXED1IO15 */
 	0, /* MIXED1IO16 */

@@ -1,5 +1,5 @@
 Flow report for NN-ESD
-Wed Oct 17 15:43:47 2018
+Sat Dec  8 11:03:10 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed Oct 17 15:43:23 2018       ;
+; Flow Status                     ; Successful - Sat Dec  8 11:02:47 2018       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; NN-ESD                                      ;
 ; Top-level Entity Name           ; DE10_Standard                               ;
@@ -48,8 +48,8 @@ refer to the applicable agreement for further details.
 ; Device                          ; 5CSXFC6D6F31C6                              ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; 424 / 41,910 ( 1 % )                        ;
-; Total registers                 ; 795                                         ;
-; Total pins                      ; 153 / 499 ( 31 % )                          ;
+; Total registers                 ; 801                                         ;
+; Total pins                      ; 157 / 499 ( 31 % )                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 1,024 / 5,662,720 ( < 1 % )                 ;
 ; Total DSP Blocks                ; 0 / 112 ( 0 % )                             ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/17/2018 15:40:44 ;
+; Start date & time ; 12/08/2018 11:00:08 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; NN-ESD              ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------+----------------------------------------+---------------+---------------+------------+
 ; Assignment Name                       ; Value                                  ; Default Value ; Entity Name   ; Section Id ;
 +---------------------------------------+----------------------------------------+---------------+---------------+------------+
-; COMPILER_SIGNATURE_ID                 ; 18121611603041.153978364323616         ; --            ; --            ; --         ;
+; COMPILER_SIGNATURE_ID                 ; 190135460055531.154426320711273        ; --            ; --            ; --         ;
 ; ECO_REGENERATE_REPORT                 ; On                                     ; Off           ; --            ; --         ;
 ; MAX_CORE_JUNCTION_TEMP                ; 85                                     ; --            ; --            ; --         ;
 ; MIN_CORE_JUNCTION_TEMP                ; 0                                      ; --            ; --            ; --         ;
@@ -98,11 +98,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:25     ; 1.0                     ; 1307 MB             ; 00:03:03                           ;
-; Fitter               ; 00:01:02     ; 1.1                     ; 3271 MB             ; 00:01:35                           ;
-; Assembler            ; 00:00:07     ; 1.0                     ; 1004 MB             ; 00:00:07                           ;
-; Timing Analyzer      ; 00:00:22     ; 1.1                     ; 1688 MB             ; 00:00:25                           ;
-; Total                ; 00:02:56     ; --                      ; --                  ; 00:05:10                           ;
+; Analysis & Synthesis ; 00:01:24     ; 1.0                     ; 1284 MB             ; 00:03:07                           ;
+; Fitter               ; 00:01:03     ; 1.1                     ; 3278 MB             ; 00:01:35                           ;
+; Assembler            ; 00:00:08     ; 1.0                     ; 998 MB              ; 00:00:07                           ;
+; Timing Analyzer      ; 00:00:23     ; 1.1                     ; 1694 MB             ; 00:00:25                           ;
+; Total                ; 00:02:58     ; --                      ; --                  ; 00:05:14                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

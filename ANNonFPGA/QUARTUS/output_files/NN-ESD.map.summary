@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Wed Oct 17 15:42:11 2018
+Analysis & Synthesis Status : Successful - Sat Dec  8 11:01:34 2018
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : NN-ESD
 Top-level Entity Name : DE10_Standard
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 783
-Total pins : 153
+Total pins : 157
 Total virtual pins : 0
 Total block memory bits : 1,024
 Total DSP Blocks : 0

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for NN-ESD
-Wed Oct 17 15:42:11 2018
+Sat Dec  8 11:01:34 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -236,9 +236,10 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 228. Port Connectivity Checks: "base_hps:u0|base_hps_hps_0:hps_0|base_hps_hps_0_hps_io:hps_io|base_hps_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst"
 229. Post-Synthesis Netlist Statistics for Top Partition
 230. Post-Synthesis Netlist Statistics for Partition base_hps_hps_0_hps_io_border:border
-231. Elapsed Time Per Partition
-232. Analysis & Synthesis Messages
-233. Analysis & Synthesis Suppressed Messages
+231. Post-Synthesis Netlist Statistics for Partition sld_hub:auto_hub
+232. Elapsed Time Per Partition
+233. Analysis & Synthesis Messages
+234. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -264,14 +265,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Oct 17 15:42:11 2018       ;
+; Analysis & Synthesis Status     ; Successful - Sat Dec  8 11:01:34 2018       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; NN-ESD                                      ;
 ; Top-level Entity Name           ; DE10_Standard                               ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 783                                         ;
-; Total pins                      ; 153                                         ;
+; Total pins                      ; 157                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 1,024                                       ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -484,16 +485,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------------------------------------------------------------------+
 ; Estimate of Logic utilization (ALMs needed) ; 441                                                                     ;
 ;                                             ;                                                                         ;
-; Combinational ALUT usage for logic          ; 734                                                                     ;
+; Combinational ALUT usage for logic          ; 733                                                                     ;
 ;     -- 7 input functions                    ; 8                                                                       ;
-;     -- 6 input functions                    ; 103                                                                     ;
-;     -- 5 input functions                    ; 98                                                                      ;
-;     -- 4 input functions                    ; 223                                                                     ;
-;     -- <=3 input functions                  ; 302                                                                     ;
+;     -- 6 input functions                    ; 104                                                                     ;
+;     -- 5 input functions                    ; 99                                                                      ;
+;     -- 4 input functions                    ; 222                                                                     ;
+;     -- <=3 input functions                  ; 300                                                                     ;
 ;                                             ;                                                                         ;
 ; Dedicated logic registers                   ; 597                                                                     ;
 ;                                             ;                                                                         ;
-; I/O pins                                    ; 153                                                                     ;
+; I/O pins                                    ; 157                                                                     ;
 ; I/O registers                               ; 186                                                                     ;
 ; Total MLAB memory bits                      ; 0                                                                       ;
 ; Total block memory bits                     ; 1024                                                                    ;
@@ -506,8 +507,8 @@ refer to the applicable agreement for further details.
 ; Total DLLs                                  ; 1                                                                       ;
 ; Maximum fan-out node                        ; base_hps:u0|base_hps_pll_0:pll_0|altera_pll:altera_pll_i|outclk_wire[0] ;
 ; Maximum fan-out                             ; 464                                                                     ;
-; Total fan-out                               ; 7169                                                                    ;
-; Average fan-out                             ; 3.00                                                                    ;
+; Total fan-out                               ; 7181                                                                    ;
+; Average fan-out                             ; 2.99                                                                    ;
 +---------------------------------------------+-------------------------------------------------------------------------+
 
 
@@ -516,7 +517,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                       ; Entity Name                                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------+--------------+
-; |DE10_Standard                                                                                                                          ; 734 (1)             ; 597 (0)                   ; 1024              ; 0          ; 153  ; 0            ; |DE10_Standard                                                                                                                                                                                                                                                                                                                                            ; DE10_Standard                                     ; work         ;
+; |DE10_Standard                                                                                                                          ; 733 (1)             ; 597 (0)                   ; 1024              ; 0          ; 157  ; 0            ; |DE10_Standard                                                                                                                                                                                                                                                                                                                                            ; DE10_Standard                                     ; work         ;
 ;    |base_hps:u0|                                                                                                                        ; 641 (0)             ; 521 (0)                   ; 1024              ; 0          ; 0    ; 0            ; |DE10_Standard|base_hps:u0                                                                                                                                                                                                                                                                                                                                ; base_hps                                          ; base_hps     ;
 ;       |altera_reset_controller:rst_controller_001|                                                                                      ; 0 (0)               ; 3 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE10_Standard|base_hps:u0|altera_reset_controller:rst_controller_001                                                                                                                                                                                                                                                                                     ; altera_reset_controller                           ; base_hps     ;
 ;          |altera_reset_synchronizer:alt_rst_sync_uq1|                                                                                   ; 0 (0)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |DE10_Standard|base_hps:u0|altera_reset_controller:rst_controller_001|altera_reset_synchronizer:alt_rst_sync_uq1                                                                                                                                                                                                                                          ; altera_reset_synchronizer                         ; base_hps     ;
@@ -632,12 +633,12 @@ refer to the applicable agreement for further details.
 ;       |base_hps_pio_0:pio_0|                                                                                                            ; 9 (9)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |DE10_Standard|base_hps:u0|base_hps_pio_0:pio_0                                                                                                                                                                                                                                                                                                           ; base_hps_pio_0                                    ; base_hps     ;
 ;       |base_hps_pll_0:pll_0|                                                                                                            ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE10_Standard|base_hps:u0|base_hps_pll_0:pll_0                                                                                                                                                                                                                                                                                                           ; base_hps_pll_0                                    ; base_hps     ;
 ;          |altera_pll:altera_pll_i|                                                                                                      ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE10_Standard|base_hps:u0|base_hps_pll_0:pll_0|altera_pll:altera_pll_i                                                                                                                                                                                                                                                                                   ; altera_pll                                        ; work         ;
-;    |sld_hub:auto_hub|                                                                                                                   ; 92 (1)              ; 76 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |DE10_Standard|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                                           ; altera_sld   ;
-;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 91 (0)              ; 76 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |DE10_Standard|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input                       ; altera_sld   ;
-;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 91 (0)              ; 76 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |DE10_Standard|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                        ; alt_sld_fab                                       ; alt_sld_fab  ;
-;             |alt_sld_fab_alt_sld_fab:alt_sld_fab|                                                                                       ; 91 (1)              ; 76 (5)                    ; 0                 ; 0          ; 0    ; 0            ; |DE10_Standard|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab                                                                                                                    ; alt_sld_fab_alt_sld_fab                           ; alt_sld_fab  ;
-;                |alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|                                                                            ; 90 (0)              ; 71 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |DE10_Standard|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric                                                                        ; alt_sld_fab_alt_sld_fab_sldfabric                 ; alt_sld_fab  ;
-;                   |sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|                                                                        ; 90 (56)             ; 71 (43)                   ; 0                 ; 0          ; 0    ; 0            ; |DE10_Standard|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub                           ; sld_jtag_hub                                      ; work         ;
+;    |sld_hub:auto_hub|                                                                                                                   ; 91 (1)              ; 76 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |DE10_Standard|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                                           ; altera_sld   ;
+;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 90 (0)              ; 76 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |DE10_Standard|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input                       ; altera_sld   ;
+;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 90 (0)              ; 76 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |DE10_Standard|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                        ; alt_sld_fab                                       ; alt_sld_fab  ;
+;             |alt_sld_fab_alt_sld_fab:alt_sld_fab|                                                                                       ; 90 (1)              ; 76 (5)                    ; 0                 ; 0          ; 0    ; 0            ; |DE10_Standard|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab                                                                                                                    ; alt_sld_fab_alt_sld_fab                           ; alt_sld_fab  ;
+;                |alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|                                                                            ; 89 (0)              ; 71 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |DE10_Standard|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric                                                                        ; alt_sld_fab_alt_sld_fab_sldfabric                 ; alt_sld_fab  ;
+;                   |sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|                                                                        ; 89 (55)             ; 71 (43)                   ; 0                 ; 0          ; 0    ; 0            ; |DE10_Standard|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub                           ; sld_jtag_hub                                      ; work         ;
 ;                      |sld_rom_sr:hub_info_reg|                                                                                          ; 15 (15)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |DE10_Standard|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg   ; sld_rom_sr                                        ; work         ;
 ;                      |sld_shadow_jsm:shadow_jsm|                                                                                        ; 19 (19)             ; 19 (19)                   ; 0                 ; 0          ; 0    ; 0            ; |DE10_Standard|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm ; sld_shadow_jsm                                    ; altera_sld   ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------+--------------+
@@ -1107,26 +1108,33 @@ Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                                                                                                                                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                                                                                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |DE10_Standard|base_hps:u0|base_hps_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_translator:pio_0_s1_translator|wait_latency_counter[1]                                                                                                              ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |DE10_Standard|base_hps:u0|base_hps_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:jtag_uart_0_avalon_jtag_slave_agent|altera_merlin_burst_uncompressor:uncompressor|burst_uncompress_byte_counter[6]                                            ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |DE10_Standard|base_hps:u0|base_hps_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:pio_0_s1_agent|altera_merlin_burst_uncompressor:uncompressor|burst_uncompress_byte_counter[2]                                                                 ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |DE10_Standard|base_hps:u0|base_hps_jtag_uart_0:jtag_uart_0|alt_jtag_atlantic:base_hps_jtag_uart_0_alt_jtag_atlantic|count[6]                                                                                                                                   ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |DE10_Standard|base_hps:u0|base_hps_jtag_uart_0:jtag_uart_0|alt_jtag_atlantic:base_hps_jtag_uart_0_alt_jtag_atlantic|td_shift[9]                                                                                                                                ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |DE10_Standard|base_hps:u0|base_hps_jtag_uart_0:jtag_uart_0|alt_jtag_atlantic:base_hps_jtag_uart_0_alt_jtag_atlantic|td_shift[7]                                                                                                                                ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |DE10_Standard|base_hps:u0|base_hps_jtag_uart_0:jtag_uart_0|alt_jtag_atlantic:base_hps_jtag_uart_0_alt_jtag_atlantic|td_shift[5]                                                                                                                                ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |DE10_Standard|base_hps:u0|base_hps_mm_interconnect_0:mm_interconnect_0|altera_merlin_axi_master_ni:hps_0_h2f_lw_axi_master_agent|altera_merlin_address_alignment:align_address_to_size|address_burst[12]                                                       ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |DE10_Standard|base_hps:u0|base_hps_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:pio_0_s1_agent_rsp_fifo|mem                                                                                                                                       ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |DE10_Standard|base_hps:u0|base_hps_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo|mem                                                                                                                  ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |DE10_Standard|base_hps:u0|base_hps_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:pio_0_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|nxt_uncomp_subburst_byte_cnt[4]                      ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |DE10_Standard|base_hps:u0|base_hps_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:jtag_uart_0_avalon_jtag_slave_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|nxt_uncomp_subburst_byte_cnt[4] ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |DE10_Standard|base_hps:u0|base_hps_mm_interconnect_0:mm_interconnect_0|altera_merlin_axi_master_ni:hps_0_h2f_lw_axi_master_agent|Selector3                                                                                                                     ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |DE10_Standard|base_hps:u0|base_hps_mm_interconnect_0:mm_interconnect_0|altera_merlin_axi_master_ni:hps_0_h2f_lw_axi_master_agent|Selector10                                                                                                                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                                                                                                                                                                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                                                                                                                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |DE10_Standard|base_hps:u0|base_hps_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_translator:pio_0_s1_translator|wait_latency_counter[1]                                                                                                                                                                                                                      ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |DE10_Standard|base_hps:u0|base_hps_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:jtag_uart_0_avalon_jtag_slave_agent|altera_merlin_burst_uncompressor:uncompressor|burst_uncompress_byte_counter[6]                                                                                                                                                    ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |DE10_Standard|base_hps:u0|base_hps_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:pio_0_s1_agent|altera_merlin_burst_uncompressor:uncompressor|burst_uncompress_byte_counter[2]                                                                                                                                                                         ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |DE10_Standard|base_hps:u0|base_hps_jtag_uart_0:jtag_uart_0|alt_jtag_atlantic:base_hps_jtag_uart_0_alt_jtag_atlantic|count[6]                                                                                                                                                                                                                                           ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |DE10_Standard|base_hps:u0|base_hps_jtag_uart_0:jtag_uart_0|alt_jtag_atlantic:base_hps_jtag_uart_0_alt_jtag_atlantic|td_shift[9]                                                                                                                                                                                                                                        ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |DE10_Standard|base_hps:u0|base_hps_jtag_uart_0:jtag_uart_0|alt_jtag_atlantic:base_hps_jtag_uart_0_alt_jtag_atlantic|td_shift[7]                                                                                                                                                                                                                                        ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |DE10_Standard|base_hps:u0|base_hps_jtag_uart_0:jtag_uart_0|alt_jtag_atlantic:base_hps_jtag_uart_0_alt_jtag_atlantic|td_shift[5]                                                                                                                                                                                                                                        ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |DE10_Standard|base_hps:u0|base_hps_mm_interconnect_0:mm_interconnect_0|altera_merlin_axi_master_ni:hps_0_h2f_lw_axi_master_agent|altera_merlin_address_alignment:align_address_to_size|address_burst[12]                                                                                                                                                               ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |DE10_Standard|base_hps:u0|base_hps_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:pio_0_s1_agent_rsp_fifo|mem                                                                                                                                                                                                                                               ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |DE10_Standard|base_hps:u0|base_hps_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo|mem                                                                                                                                                                                                                          ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |DE10_Standard|base_hps:u0|base_hps_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:pio_0_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|nxt_uncomp_subburst_byte_cnt[4]                                                                                                                              ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |DE10_Standard|base_hps:u0|base_hps_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:jtag_uart_0_avalon_jtag_slave_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|nxt_uncomp_subburst_byte_cnt[4]                                                                                                         ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |DE10_Standard|base_hps:u0|base_hps_mm_interconnect_0:mm_interconnect_0|altera_merlin_axi_master_ni:hps_0_h2f_lw_axi_master_agent|Selector3                                                                                                                                                                                                                             ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |DE10_Standard|base_hps:u0|base_hps_mm_interconnect_0:mm_interconnect_0|altera_merlin_axi_master_ni:hps_0_h2f_lw_axi_master_agent|Selector10                                                                                                                                                                                                                            ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |DE10_Standard|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg[2]                             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |DE10_Standard|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_minor_ver_reg[2]                    ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |DE10_Standard|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_minor_ver_reg[3]                    ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |DE10_Standard|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal[4]              ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |DE10_Standard|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|word_counter[1] ;
+; 34:1               ; 4 bits    ; 88 LEs        ; 64 LEs               ; 24 LEs                 ; Yes        ; |DE10_Standard|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|design_hash_reg[1]                      ;
+; 20:1               ; 4 bits    ; 52 LEs        ; 32 LEs               ; 20 LEs                 ; Yes        ; |DE10_Standard|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|WORD_SR[1]      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -5389,7 +5397,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; arriav_hps_interface_hps2fpga_light_weight         ; 1     ;
 ; arriav_hps_interface_interrupts                    ; 1     ;
 ; arriav_hps_interface_tpiu_trace                    ; 1     ;
-; arriav_io_obuf                                     ; 41    ;
+; arriav_io_obuf                                     ; 39    ;
 ; arriav_lcell_comb                                  ; 641   ;
 ;     arith                                          ; 75    ;
 ;         0 data inputs                              ; 1     ;
@@ -5409,12 +5417,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         6 data inputs                              ; 90    ;
 ; blackbox                                           ; 1     ;
 ;                 ase_hps_hps_0_hps_io_border:border ; 1     ;
-; boundary_port                                      ; 165   ;
+; boundary_port                                      ; 169   ;
 ; generic_pll                                        ; 1     ;
 ; stratixv_ram_block                                 ; 16    ;
 ;                                                    ;       ;
 ; Max LUT depth                                      ; 5.30  ;
-; Average LUT depth                                  ; 2.15  ;
+; Average LUT depth                                  ; 2.14  ;
 +----------------------------------------------------+-------+
 
 
@@ -5435,12 +5443,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; arriav_ff                          ; 36                                             ;
 ;     plain                          ; 36                                             ;
 ; arriav_hps_peripheral_emac         ; 1                                              ;
+; arriav_hps_peripheral_gpio         ; 1                                              ;
 ; arriav_hps_peripheral_sdmmc        ; 1                                              ;
+; arriav_hps_peripheral_spi_master   ; 1                                              ;
 ; arriav_hps_peripheral_uart         ; 1                                              ;
 ; arriav_hps_sdram_pll               ; 1                                              ;
 ; arriav_io_config                   ; 40                                             ;
 ; arriav_io_ibuf                     ; 36                                             ;
-; arriav_io_obuf                     ; 52                                             ;
+; arriav_io_obuf                     ; 55                                             ;
 ; arriav_ir_fifo_userdes             ; 32                                             ;
 ; arriav_lcell_comb                  ; 1                                              ;
 ;     normal                         ; 1                                              ;
@@ -5450,7 +5460,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; arriav_mem_phy                     ; 1                                              ;
 ; arriav_read_fifo_read_clock_select ; 32                                             ;
 ; arriav_vfifo                       ; 4                                              ;
-; boundary_port                      ; 94                                             ;
+; boundary_port                      ; 100                                            ;
 ; cyclonev_hmc                       ; 1                                              ;
 ; cyclonev_termination               ; 1                                              ;
 ; cyclonev_termination_logic         ; 1                                              ;
@@ -5461,6 +5471,33 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------------------------+------------------------------------------------+
 
 
++------------------------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Partition sld_hub:auto_hub ;
++-----------------------+------------------------------------------+
+; Type                  ; Count                                    ;
++-----------------------+------------------------------------------+
+; arriav_ff             ; 76                                       ;
+;     CLR               ; 4                                        ;
+;     ENA               ; 30                                       ;
+;     ENA CLR           ; 19                                       ;
+;     SCLR              ; 7                                        ;
+;     plain             ; 16                                       ;
+; arriav_lcell_comb     ; 91                                       ;
+;     normal            ; 91                                       ;
+;         0 data inputs ; 1                                        ;
+;         1 data inputs ; 4                                        ;
+;         2 data inputs ; 22                                       ;
+;         3 data inputs ; 15                                       ;
+;         4 data inputs ; 14                                       ;
+;         5 data inputs ; 21                                       ;
+;         6 data inputs ; 14                                       ;
+; boundary_port         ; 89                                       ;
+;                       ;                                          ;
+; Max LUT depth         ; 3.00                                     ;
+; Average LUT depth     ; 1.49                                     ;
++-----------------------+------------------------------------------+
+
+
 +----------------------------------------------------+
 ; Elapsed Time Per Partition                         ;
 +-------------------------------------+--------------+
@@ -5468,6 +5505,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------+--------------+
 ; Top                                 ; 00:00:04     ;
 ; base_hps_hps_0_hps_io_border:border ; 00:00:00     ;
+; sld_hub:auto_hub                    ; 00:00:00     ;
 +-------------------------------------+--------------+
 
 
@@ -5477,27 +5515,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Oct 17 15:40:43 2018
+    Info: Processing started: Sat Dec  8 11:00:07 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off NN-ESD -c NN-ESD
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12248): Elaborating Platform Designer system entity "base_hps.qsys"
-Info (12250): 2018.10.17.15:40:56 Progress: Loading QUARTUS/base_hps.qsys
-Info (12250): 2018.10.17.15:40:56 Progress: Reading input file
-Info (12250): 2018.10.17.15:40:56 Progress: Adding clk_0 [clock_source 18.1]
-Info (12250): 2018.10.17.15:40:57 Progress: Parameterizing module clk_0
-Info (12250): 2018.10.17.15:40:57 Progress: Adding hps_0 [altera_hps 18.1]
-Info (12250): 2018.10.17.15:40:58 Progress: Parameterizing module hps_0
-Info (12250): 2018.10.17.15:40:58 Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
-Info (12250): 2018.10.17.15:40:58 Progress: Parameterizing module jtag_uart_0
-Info (12250): 2018.10.17.15:40:58 Progress: Adding pio_0 [altera_avalon_pio 18.1]
-Info (12250): 2018.10.17.15:40:58 Progress: Parameterizing module pio_0
-Info (12250): 2018.10.17.15:40:58 Progress: Adding pll_0 [altera_pll 18.1]
-Info (12250): 2018.10.17.15:40:58 Progress: Parameterizing module pll_0
-Info (12250): 2018.10.17.15:40:58 Progress: Building connections
-Info (12250): 2018.10.17.15:40:58 Progress: Parameterizing connections
-Info (12250): 2018.10.17.15:40:58 Progress: Validating
-Info (12250): 2018.10.17.15:41:06 Progress: Done reading input file
+Info (12250): 2018.12.08.11:00:20 Progress: Loading QUARTUS/base_hps.qsys
+Info (12250): 2018.12.08.11:00:20 Progress: Reading input file
+Info (12250): 2018.12.08.11:00:20 Progress: Adding clk_0 [clock_source 18.1]
+Info (12250): 2018.12.08.11:00:21 Progress: Parameterizing module clk_0
+Info (12250): 2018.12.08.11:00:21 Progress: Adding hps_0 [altera_hps 18.1]
+Info (12250): 2018.12.08.11:00:22 Progress: Parameterizing module hps_0
+Info (12250): 2018.12.08.11:00:22 Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
+Info (12250): 2018.12.08.11:00:22 Progress: Parameterizing module jtag_uart_0
+Info (12250): 2018.12.08.11:00:22 Progress: Adding pio_0 [altera_avalon_pio 18.1]
+Info (12250): 2018.12.08.11:00:22 Progress: Parameterizing module pio_0
+Info (12250): 2018.12.08.11:00:22 Progress: Adding pll_0 [altera_pll 18.1]
+Info (12250): 2018.12.08.11:00:23 Progress: Parameterizing module pll_0
+Info (12250): 2018.12.08.11:00:23 Progress: Building connections
+Info (12250): 2018.12.08.11:00:23 Progress: Parameterizing connections
+Info (12250): 2018.12.08.11:00:23 Progress: Validating
+Info (12250): 2018.12.08.11:00:30 Progress: Done reading input file
 Info (12250): Base_hps.hps_0: HPS Main PLL counter settings: n = 0  m = 73
 Info (12250): Base_hps.hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
 Warning (12251): Base_hps.hps_0: "Configuration/HPS-to-FPGA user 0 clock frequency" (desired_cfg_clk_mhz) requested 100.0 MHz, but only achieved 97.368421 MHz
@@ -5517,11 +5555,11 @@ Warning (12251): Hps_0: "Configuration/HPS-to-FPGA user 0 clock frequency" (desi
 Warning (12251): Hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
 Info (12250): Hps_0: "base_hps" instantiated altera_hps "hps_0"
 Info (12250): Jtag_uart_0: Starting RTL generation for module 'base_hps_jtag_uart_0'
-Info (12250): Jtag_uart_0:   Generation command is [exec /home/jan/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/jan/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/jan/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/jan/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/jan/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/jan/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/jan/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/jan/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=base_hps_jtag_uart_0 --dir=/tmp/alt7821_3413435645173476084.dir/0002_jtag_uart_0_gen/ --quartus_dir=/home/jan/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt7821_3413435645173476084.dir/0002_jtag_uart_0_gen//base_hps_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Jtag_uart_0:   Generation command is [exec /home/jan/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/jan/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/jan/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/jan/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/jan/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/jan/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/jan/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/jan/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=base_hps_jtag_uart_0 --dir=/tmp/alt7873_7108276764745828542.dir/0002_jtag_uart_0_gen/ --quartus_dir=/home/jan/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt7873_7108276764745828542.dir/0002_jtag_uart_0_gen//base_hps_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
 Info (12250): Jtag_uart_0: Done RTL generation for module 'base_hps_jtag_uart_0'
 Info (12250): Jtag_uart_0: "base_hps" instantiated altera_avalon_jtag_uart "jtag_uart_0"
 Info (12250): Pio_0: Starting RTL generation for module 'base_hps_pio_0'
-Info (12250): Pio_0:   Generation command is [exec /home/jan/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/jan/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/jan/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/jan/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/jan/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/jan/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/jan/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/jan/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=base_hps_pio_0 --dir=/tmp/alt7821_3413435645173476084.dir/0003_pio_0_gen/ --quartus_dir=/home/jan/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt7821_3413435645173476084.dir/0003_pio_0_gen//base_hps_pio_0_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Pio_0:   Generation command is [exec /home/jan/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/jan/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/jan/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/jan/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/jan/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/jan/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/jan/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/jan/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=base_hps_pio_0 --dir=/tmp/alt7873_7108276764745828542.dir/0003_pio_0_gen/ --quartus_dir=/home/jan/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt7873_7108276764745828542.dir/0003_pio_0_gen//base_hps_pio_0_component_configuration.pl  --do_build_sim=0  ]
 Info (12250): Pio_0: Done RTL generation for module 'base_hps_pio_0'
 Info (12250): Pio_0: "base_hps" instantiated altera_avalon_pio "pio_0"
 Info (12250): Pll_0: "base_hps" instantiated altera_pll "pll_0"
@@ -5688,12 +5726,12 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/ip/b
 Warning (10236): Verilog HDL Implicit Net warning at hps_sdram_pll.sv(168): created implicit net for "pll_dr_clk" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/submodules/hps_sdram_pll.sv Line: 168
 Info (12127): Elaborating entity "DE10_Standard" for the top level hierarchy
 Warning (10873): Using initial value X (don't care) for net "LEDR[9..8]" at DE10_Standard.vhd(26) File: /home/jan/ANNonFPGA/ANNonFPGA/RTL/DE10_Standard.vhd Line: 26
-Info (12128): Elaborating entity "base_hps" for hierarchy "base_hps:u0" File: /home/jan/ANNonFPGA/ANNonFPGA/RTL/DE10_Standard.vhd Line: 184
-Info (12128): Elaborating entity "base_hps_hps_0" for hierarchy "base_hps:u0|base_hps_hps_0:hps_0" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/base_hps.v Line: 188
-Info (12128): Elaborating entity "base_hps_hps_0_fpga_interfaces" for hierarchy "base_hps:u0|base_hps_hps_0:hps_0|base_hps_hps_0_fpga_interfaces:fpga_interfaces" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/submodules/base_hps_hps_0.v Line: 160
-Info (12128): Elaborating entity "base_hps_hps_0_hps_io" for hierarchy "base_hps:u0|base_hps_hps_0:hps_0|base_hps_hps_0_hps_io:hps_io" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/submodules/base_hps_hps_0.v Line: 201
-Info (12128): Elaborating entity "base_hps_hps_0_hps_io_border" for hierarchy "base_hps:u0|base_hps_hps_0:hps_0|base_hps_hps_0_hps_io:hps_io|base_hps_hps_0_hps_io_border:border" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/submodules/base_hps_hps_0_hps_io.v Line: 89
-Info (12128): Elaborating entity "hps_sdram" for hierarchy "base_hps:u0|base_hps_hps_0:hps_0|base_hps_hps_0_hps_io:hps_io|base_hps_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/submodules/base_hps_hps_0_hps_io_border.sv Line: 199
+Info (12128): Elaborating entity "base_hps" for hierarchy "base_hps:u0" File: /home/jan/ANNonFPGA/ANNonFPGA/RTL/DE10_Standard.vhd Line: 190
+Info (12128): Elaborating entity "base_hps_hps_0" for hierarchy "base_hps:u0|base_hps_hps_0:hps_0" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/base_hps.v Line: 200
+Info (12128): Elaborating entity "base_hps_hps_0_fpga_interfaces" for hierarchy "base_hps:u0|base_hps_hps_0:hps_0|base_hps_hps_0_fpga_interfaces:fpga_interfaces" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/submodules/base_hps_hps_0.v Line: 166
+Info (12128): Elaborating entity "base_hps_hps_0_hps_io" for hierarchy "base_hps:u0|base_hps_hps_0:hps_0|base_hps_hps_0_hps_io:hps_io" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/submodules/base_hps_hps_0.v Line: 213
+Info (12128): Elaborating entity "base_hps_hps_0_hps_io_border" for hierarchy "base_hps:u0|base_hps_hps_0:hps_0|base_hps_hps_0_hps_io:hps_io|base_hps_hps_0_hps_io_border:border" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/submodules/base_hps_hps_0_hps_io.v Line: 101
+Info (12128): Elaborating entity "hps_sdram" for hierarchy "base_hps:u0|base_hps_hps_0:hps_0|base_hps_hps_0_hps_io:hps_io|base_hps_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/submodules/base_hps_hps_0_hps_io_border.sv Line: 251
 Info (12128): Elaborating entity "hps_sdram_pll" for hierarchy "base_hps:u0|base_hps_hps_0:hps_0|base_hps_hps_0_hps_io:hps_io|base_hps_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/submodules/hps_sdram.v Line: 105
 Warning (10036): Verilog HDL or VHDL warning at hps_sdram_pll.sv(168): object "pll_dr_clk" assigned a value but never read File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/submodules/hps_sdram_pll.sv Line: 168
 Warning (10034): Output port "pll_locked" at hps_sdram_pll.sv(91) has no driver File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/submodules/hps_sdram_pll.sv Line: 91
@@ -5735,7 +5773,6 @@ Info (12128): Elaborating entity "hps_sdram_p0_clock_pair_generator" for hierarc
 Info (12128): Elaborating entity "hps_sdram_p0_altdqdqs" for hierarchy "base_hps:u0|base_hps_hps_0:hps_0|base_hps_hps_0_hps_io:hps_io|base_hps_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_p0:p0|hps_sdram_p0_acv_hard_memphy:umemphy|hps_sdram_p0_acv_hard_io_pads:uio_pads|hps_sdram_p0_altdqdqs:dq_ddio[0].ubidir_dq_dqs" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/submodules/hps_sdram_p0_acv_hard_io_pads.v Line: 317
 Info (12128): Elaborating entity "altdq_dqs2_acv_connect_to_hard_phy_cyclonev" for hierarchy "base_hps:u0|base_hps_hps_0:hps_0|base_hps_hps_0_hps_io:hps_io|base_hps_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_p0:p0|hps_sdram_p0_acv_hard_memphy:umemphy|hps_sdram_p0_acv_hard_io_pads:uio_pads|hps_sdram_p0_altdqdqs:dq_ddio[0].ubidir_dq_dqs|altdq_dqs2_acv_connect_to_hard_phy_cyclonev:altdq_dqs2_inst" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/submodules/hps_sdram_p0_altdqdqs.v Line: 146
 Info (12128): Elaborating entity "altera_mem_if_hhp_qseq_synth_top" for hierarchy "base_hps:u0|base_hps_hps_0:hps_0|base_hps_hps_0_hps_io:hps_io|base_hps_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|altera_mem_if_hhp_qseq_synth_top:seq" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/submodules/hps_sdram.v Line: 238
-Warning (12158): Entity "altera_mem_if_hhp_qseq_synth_top" contains only dangling pins File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/submodules/hps_sdram.v Line: 238
 Info (12128): Elaborating entity "altera_mem_if_hard_memory_controller_top_cyclonev" for hierarchy "base_hps:u0|base_hps_hps_0:hps_0|base_hps_hps_0_hps_io:hps_io|base_hps_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|altera_mem_if_hard_memory_controller_top_cyclonev:c0" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/submodules/hps_sdram.v Line: 794
 Warning (10230): Verilog HDL assignment warning at altera_mem_if_hard_memory_controller_top_cyclonev.sv(1166): truncated value with size 320 to match size of target (1) File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/submodules/altera_mem_if_hard_memory_controller_top_cyclonev.sv Line: 1166
 Warning (10230): Verilog HDL assignment warning at altera_mem_if_hard_memory_controller_top_cyclonev.sv(1167): truncated value with size 320 to match size of target (1) File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/submodules/altera_mem_if_hard_memory_controller_top_cyclonev.sv Line: 1167
@@ -5745,7 +5782,7 @@ Warning (10230): Verilog HDL assignment warning at altera_mem_if_hard_memory_con
 Warning (10230): Verilog HDL assignment warning at altera_mem_if_hard_memory_controller_top_cyclonev.sv(1171): truncated value with size 320 to match size of target (1) File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/submodules/altera_mem_if_hard_memory_controller_top_cyclonev.sv Line: 1171
 Info (12128): Elaborating entity "altera_mem_if_oct_cyclonev" for hierarchy "base_hps:u0|base_hps_hps_0:hps_0|base_hps_hps_0_hps_io:hps_io|base_hps_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|altera_mem_if_oct_cyclonev:oct" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/submodules/hps_sdram.v Line: 802
 Info (12128): Elaborating entity "altera_mem_if_dll_cyclonev" for hierarchy "base_hps:u0|base_hps_hps_0:hps_0|base_hps_hps_0_hps_io:hps_io|base_hps_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|altera_mem_if_dll_cyclonev:dll" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/submodules/hps_sdram.v Line: 814
-Info (12128): Elaborating entity "base_hps_jtag_uart_0" for hierarchy "base_hps:u0|base_hps_jtag_uart_0:jtag_uart_0" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/base_hps.v Line: 201
+Info (12128): Elaborating entity "base_hps_jtag_uart_0" for hierarchy "base_hps:u0|base_hps_jtag_uart_0:jtag_uart_0" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/base_hps.v Line: 213
 Info (12128): Elaborating entity "base_hps_jtag_uart_0_scfifo_w" for hierarchy "base_hps:u0|base_hps_jtag_uart_0:jtag_uart_0|base_hps_jtag_uart_0_scfifo_w:the_base_hps_jtag_uart_0_scfifo_w" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/submodules/base_hps_jtag_uart_0.v Line: 420
 Info (12128): Elaborating entity "scfifo" for hierarchy "base_hps:u0|base_hps_jtag_uart_0:jtag_uart_0|base_hps_jtag_uart_0_scfifo_w:the_base_hps_jtag_uart_0_scfifo_w|scfifo:wfifo" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/submodules/base_hps_jtag_uart_0.v Line: 139
 Info (12130): Elaborated megafunction instantiation "base_hps:u0|base_hps_jtag_uart_0:jtag_uart_0|base_hps_jtag_uart_0_scfifo_w:the_base_hps_jtag_uart_0_scfifo_w|scfifo:wfifo" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/submodules/base_hps_jtag_uart_0.v Line: 139
@@ -5787,8 +5824,8 @@ Info (12133): Instantiated megafunction "base_hps:u0|base_hps_jtag_uart_0:jtag_u
     Info (12134): Parameter "SLD_AUTO_INSTANCE_INDEX" = "YES"
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "base_hps:u0|base_hps_jtag_uart_0:jtag_uart_0|alt_jtag_atlantic:base_hps_jtag_uart_0_alt_jtag_atlantic|sld_jtag_endpoint_adapter:inst" File: /home/jan/intelFPGA_lite/18.1/quartus/libraries/megafunctions/alt_jtag_atlantic.v Line: 276
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "base_hps:u0|base_hps_jtag_uart_0:jtag_uart_0|alt_jtag_atlantic:base_hps_jtag_uart_0_alt_jtag_atlantic|sld_jtag_endpoint_adapter:inst|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: /home/jan/intelFPGA_lite/18.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
-Info (12128): Elaborating entity "base_hps_pio_0" for hierarchy "base_hps:u0|base_hps_pio_0:pio_0" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/base_hps.v Line: 212
-Info (12128): Elaborating entity "base_hps_pll_0" for hierarchy "base_hps:u0|base_hps_pll_0:pll_0" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/base_hps.v Line: 219
+Info (12128): Elaborating entity "base_hps_pio_0" for hierarchy "base_hps:u0|base_hps_pio_0:pio_0" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/base_hps.v Line: 224
+Info (12128): Elaborating entity "base_hps_pll_0" for hierarchy "base_hps:u0|base_hps_pll_0:pll_0" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/base_hps.v Line: 231
 Info (12128): Elaborating entity "altera_pll" for hierarchy "base_hps:u0|base_hps_pll_0:pll_0|altera_pll:altera_pll_i" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/submodules/base_hps_pll_0.v Line: 85
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
 Info (12130): Elaborated megafunction instantiation "base_hps:u0|base_hps_pll_0:pll_0|altera_pll:altera_pll_i" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/submodules/base_hps_pll_0.v Line: 85
@@ -5853,7 +5890,7 @@ Info (12133): Instantiated megafunction "base_hps:u0|base_hps_pll_0:pll_0|altera
     Info (12134): Parameter "duty_cycle17" = "50"
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
-Info (12128): Elaborating entity "base_hps_mm_interconnect_0" for hierarchy "base_hps:u0|base_hps_mm_interconnect_0:mm_interconnect_0" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/base_hps.v Line: 273
+Info (12128): Elaborating entity "base_hps_mm_interconnect_0" for hierarchy "base_hps:u0|base_hps_mm_interconnect_0:mm_interconnect_0" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/base_hps.v Line: 285
 Info (12128): Elaborating entity "altera_merlin_slave_translator" for hierarchy "base_hps:u0|base_hps_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_translator:jtag_uart_0_avalon_jtag_slave_translator" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/submodules/base_hps_mm_interconnect_0.v Line: 340
 Info (12128): Elaborating entity "altera_merlin_slave_translator" for hierarchy "base_hps:u0|base_hps_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_translator:pio_0_s1_translator" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/submodules/base_hps_mm_interconnect_0.v Line: 404
 Info (12128): Elaborating entity "altera_merlin_axi_master_ni" for hierarchy "base_hps:u0|base_hps_mm_interconnect_0:mm_interconnect_0|altera_merlin_axi_master_ni:hps_0_h2f_lw_axi_master_agent" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/submodules/base_hps_mm_interconnect_0.v Line: 532
@@ -5883,13 +5920,13 @@ Info (12128): Elaborating entity "base_hps_mm_interconnect_0_rsp_mux" for hierar
 Info (12128): Elaborating entity "altera_merlin_arbitrator" for hierarchy "base_hps:u0|base_hps_mm_interconnect_0:mm_interconnect_0|base_hps_mm_interconnect_0_rsp_mux:rsp_mux|altera_merlin_arbitrator:arb" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/submodules/base_hps_mm_interconnect_0_rsp_mux.sv Line: 310
 Info (12128): Elaborating entity "base_hps_mm_interconnect_0_avalon_st_adapter" for hierarchy "base_hps:u0|base_hps_mm_interconnect_0:mm_interconnect_0|base_hps_mm_interconnect_0_avalon_st_adapter:avalon_st_adapter" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/submodules/base_hps_mm_interconnect_0.v Line: 1341
 Info (12128): Elaborating entity "base_hps_mm_interconnect_0_avalon_st_adapter_error_adapter_0" for hierarchy "base_hps:u0|base_hps_mm_interconnect_0:mm_interconnect_0|base_hps_mm_interconnect_0_avalon_st_adapter:avalon_st_adapter|base_hps_mm_interconnect_0_avalon_st_adapter_error_adapter_0:error_adapter_0" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/submodules/base_hps_mm_interconnect_0_avalon_st_adapter.v Line: 200
-Info (12128): Elaborating entity "base_hps_irq_mapper" for hierarchy "base_hps:u0|base_hps_irq_mapper:irq_mapper" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/base_hps.v Line: 280
-Info (12128): Elaborating entity "base_hps_irq_mapper_001" for hierarchy "base_hps:u0|base_hps_irq_mapper_001:irq_mapper_001" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/base_hps.v Line: 286
-Info (12128): Elaborating entity "altera_reset_controller" for hierarchy "base_hps:u0|altera_reset_controller:rst_controller" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/base_hps.v Line: 349
+Info (12128): Elaborating entity "base_hps_irq_mapper" for hierarchy "base_hps:u0|base_hps_irq_mapper:irq_mapper" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/base_hps.v Line: 292
+Info (12128): Elaborating entity "base_hps_irq_mapper_001" for hierarchy "base_hps:u0|base_hps_irq_mapper_001:irq_mapper_001" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/base_hps.v Line: 298
+Info (12128): Elaborating entity "altera_reset_controller" for hierarchy "base_hps:u0|altera_reset_controller:rst_controller" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/base_hps.v Line: 361
 Info (12128): Elaborating entity "altera_reset_synchronizer" for hierarchy "base_hps:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/submodules/altera_reset_controller.v Line: 208
 Info (12128): Elaborating entity "altera_reset_synchronizer" for hierarchy "base_hps:u0|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1" File: /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/db/ip/base_hps/submodules/altera_reset_controller.v Line: 220
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2018.10.17.15:41:57 Progress: Loading sld18b06f02/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2018.12.08.11:01:16 Progress: Loading sld18b06f02/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -5915,8 +5952,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/ip/s
 Warning (12241): 35 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "HPS_CONV_USB_N" has no driver File: /home/jan/ANNonFPGA/ANNonFPGA/RTL/DE10_Standard.vhd Line: 60
-    Warning (13040): bidirectional pin "HPS_ENET_INT_N" has no driver File: /home/jan/ANNonFPGA/ANNonFPGA/RTL/DE10_Standard.vhd Line: 78
-    Warning (13040): bidirectional pin "HPS_KEY" has no driver File: /home/jan/ANNonFPGA/ANNonFPGA/RTL/DE10_Standard.vhd Line: 96
     Warning (13040): bidirectional pin "HPS_LED" has no driver File: /home/jan/ANNonFPGA/ANNonFPGA/RTL/DE10_Standard.vhd Line: 104
     Warning (13040): bidirectional pin "HPS_LTC_GPIO" has no driver File: /home/jan/ANNonFPGA/ANNonFPGA/RTL/DE10_Standard.vhd Line: 105
     Warning (13040): bidirectional pin "GPIO[0]" has no driver File: /home/jan/ANNonFPGA/ANNonFPGA/RTL/DE10_Standard.vhd Line: 122
@@ -5996,7 +6031,9 @@ Warning (13009): TRI or OPNDRN buffers permanently enabled
     Warning (13010): Node "HPS_DDR3_DQS_P[1]~synth" File: /home/jan/ANNonFPGA/ANNonFPGA/RTL/DE10_Standard.vhd Line: 71
     Warning (13010): Node "HPS_DDR3_DQS_P[2]~synth" File: /home/jan/ANNonFPGA/ANNonFPGA/RTL/DE10_Standard.vhd Line: 71
     Warning (13010): Node "HPS_DDR3_DQS_P[3]~synth" File: /home/jan/ANNonFPGA/ANNonFPGA/RTL/DE10_Standard.vhd Line: 71
+    Warning (13010): Node "HPS_ENET_INT_N~synth" File: /home/jan/ANNonFPGA/ANNonFPGA/RTL/DE10_Standard.vhd Line: 78
     Warning (13010): Node "HPS_ENET_MDIO~synth" File: /home/jan/ANNonFPGA/ANNonFPGA/RTL/DE10_Standard.vhd Line: 80
+    Warning (13010): Node "HPS_KEY~synth" File: /home/jan/ANNonFPGA/ANNonFPGA/RTL/DE10_Standard.vhd Line: 96
     Warning (13010): Node "HPS_SD_CMD~synth" File: /home/jan/ANNonFPGA/ANNonFPGA/RTL/DE10_Standard.vhd Line: 107
     Warning (13010): Node "HPS_SD_DATA[0]~synth" File: /home/jan/ANNonFPGA/ANNonFPGA/RTL/DE10_Standard.vhd Line: 108
     Warning (13010): Node "HPS_SD_DATA[1]~synth" File: /home/jan/ANNonFPGA/ANNonFPGA/RTL/DE10_Standard.vhd Line: 108
@@ -6008,6 +6045,7 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (17049): 100 registers lost all their fanouts during netlist optimizations.
 Info (286031): Timing-Driven Synthesis is running on partition "base_hps_hps_0_hps_io_border:border"
+Info (286031): Timing-Driven Synthesis is running on partition "sld_hub:auto_hub"
 Info (144001): Generated suppressed messages file /home/jan/ANNonFPGA/ANNonFPGA/QUARTUS/output_files/NN-ESD.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 23 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
@@ -6018,19 +6056,19 @@ Warning (21074): Design contains 6 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]" File: /home/jan/ANNonFPGA/ANNonFPGA/RTL/DE10_Standard.vhd Line: 20
     Warning (15610): No output dependent on input pin "KEY[2]" File: /home/jan/ANNonFPGA/ANNonFPGA/RTL/DE10_Standard.vhd Line: 20
     Warning (15610): No output dependent on input pin "KEY[3]" File: /home/jan/ANNonFPGA/ANNonFPGA/RTL/DE10_Standard.vhd Line: 20
-Info (21057): Implemented 1876 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 19 input pins
-    Info (21059): Implemented 51 output pins
+Info (21057): Implemented 1881 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 20 input pins
+    Info (21059): Implemented 54 output pins
     Info (21060): Implemented 87 bidirectional pins
-    Info (21061): Implemented 1056 logic cells
+    Info (21061): Implemented 1055 logic cells
     Info (21064): Implemented 16 RAM segments
     Info (21065): Implemented 1 PLLs
     Info (21066): Implemented 1 delay-locked loops
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 130 warnings
-    Info: Peak virtual memory: 1307 megabytes
-    Info: Processing ended: Wed Oct 17 15:42:11 2018
-    Info: Elapsed time: 00:01:28
-    Info: Total CPU time (on all processors): 00:03:05
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 129 warnings
+    Info: Peak virtual memory: 1290 megabytes
+    Info: Processing ended: Sat Dec  8 11:01:34 2018
+    Info: Elapsed time: 00:01:27
+    Info: Total CPU time (on all processors): 00:03:10
 
 
 +------------------------------------------+

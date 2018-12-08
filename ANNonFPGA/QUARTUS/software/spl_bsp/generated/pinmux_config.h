@@ -30,8 +30,8 @@
 #ifndef _PRELOADER_PINMUX_CONFIG_H_
 #define _PRELOADER_PINMUX_CONFIG_H_
 
-#define CONFIG_HPS_EMAC0 (1)
-#define CONFIG_HPS_EMAC1 (0)
+#define CONFIG_HPS_EMAC0 (0)
+#define CONFIG_HPS_EMAC1 (1)
 #define CONFIG_HPS_USB0 (0)
 #define CONFIG_HPS_USB1 (0)
 #define CONFIG_HPS_NAND (0)
@@ -45,7 +45,7 @@
 #define CONFIG_HPS_I2C2 (0)
 #define CONFIG_HPS_I2C3 (0)
 #define CONFIG_HPS_SPIM0 (0)
-#define CONFIG_HPS_SPIM1 (0)
+#define CONFIG_HPS_SPIM1 (1)
 #define CONFIG_HPS_SPIS0 (0)
 #define CONFIG_HPS_SPIS1 (0)
 #define CONFIG_HPS_CAN0 (0)
